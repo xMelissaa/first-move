@@ -1,0 +1,15 @@
+.DS_Store
+.git/
+build/
+DerivedData/
+FirstMove.xcodeproj/
+*.xcarchive
+*.ipa
+*.p12
+*.p8
+*.mobileprovision
+*.xcuserstate
+xcuserdata/
+Tools/node_modules/
+.env*
+!.env.example
