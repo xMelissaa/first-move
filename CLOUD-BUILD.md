@@ -2,14 +2,14 @@
 
 This repository contains a native SwiftUI iPhone app, not a website. GitHub's hosted Mac can generate its Xcode project, compile it, run the chess tests and interface tests, and save a simulator screenshot. You can start that workflow from Windows or your iPhone. Apple Developer Program membership is not required for the unsigned simulator build. GitHub Actions usage limits and any charges depend on your GitHub plan.
 
-The cloud workflows are prepared, but have not been run for you. A real GitHub run must pass before treating the app as compiled or tested. A simulator build cannot be installed on your iPhone; the later signed TestFlight route requires Apple developer membership and account setup.
+The simulator workflow has now run successfully in [xMelissaa/first-move](https://github.com/xMelissaa/first-move/actions/runs/42091840932): Xcode 26.6 compiled the app and all 35 unit tests plus 2 UI tests passed on November 5, 2026. A simulator build cannot be installed on your iPhone; the later signed TestFlight route requires Apple developer membership and account setup. The signed workflow has not been run.
 
 ## 1. Run the free simulator build
 
 1. Create a GitHub repository and put the contents of this folder at its root. The root must contain `project.yml`, `Knightly/`, `KnightlyTests/`, `FirstMoveUITests/`, and `.github/workflows/`.
 2. On Windows, GitHub Desktop is a convenient way to publish the entire folder, including the hidden `.github` directory. You may also use GitHub's browser upload, but verify that both workflow files are present under `.github/workflows` afterward. Keep the repository private if you do not want to share its source.
 3. Open the repository's **Actions** tab. Enable workflows if GitHub prompts you. Select **iPhone build and tests**, then **Run workflow**. It also runs automatically on pushes to `main` or `master` and on pull requests.
-4. Wait for the green result. If it fails, open the failed step and its log. The build is using Apple's Xcode and a real iPhone simulator in the cloud; Windows does not compile SwiftUI locally.
+4. Wait for the green result. If a future run fails, open the failed step and its log. The build uses Apple's Xcode and an iPhone simulator in the cloud; Windows does not compile SwiftUI locally.
 5. Open the completed run and download the artifact named `FirstMove-simulator-…`. It contains the screenshot, Xcode log, `.xcresult` test report, and simulator `.app` bundle. View the PNG on Windows. The `.app` is for a Mac simulator, not a device installer; `.xcresult` is intended for Xcode.
 
 The workflow selects an available iPhone on the hosted runner rather than requiring one particular phone model. Interface tests can attach additional screens to the Xcode test report. A failed build may have logs without a screenshot or app bundle.

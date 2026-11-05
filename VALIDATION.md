@@ -9,11 +9,22 @@
 - XcodeGen and workflow YAML parsing, embedded Python syntax, Info.plist/entitlements/privacy-manifest parsing, bundled icon dimensions, and source archive contents.
 - Independent static code review found and corrected Swift language-mode configuration, feature-flag parsing, multi-view card layout, and en-passant repetition identity.
 
-## Prepared, not yet executed
+## Passed on Apple's toolchain in the cloud
 
 - Native engine XCTest: standard initial/Kiwipete/endgame perft counts, special rules, pins, legal moves, FEN and check states.
 - Native parity XCTest: compare the Swift engine with the 128-position independent oracle and 440 transitions, plus every course position and answer.
 - Native progress XCTest: XP caps, streaks across DST/year boundaries, review schedules, account isolation, merges, resets and backup restores.
 - Native UI tests: onboarding, goal/name settings, wrong-answer retries, first lesson completion, XP/unlock persistence after relaunch, tabs, legal board destinations and undo. Screenshot attachments are included in the tests.
 
-These need the cloud Mac workflow. No Apple compiler, iPhone simulator, signed device, TestFlight upload, or iCloud round-trip was available in this Windows authoring session. A source package is not proof that these native checks pass.
+All 35 native unit tests and 2 UI tests passed with zero failures. The run used Xcode 26.6 and an iPhone Air simulator on a GitHub-hosted Mac. Its test step ended with `TEST SUCCEEDED`; screenshot capture and artifact upload also succeeded.
+
+- Tested app source: `927d5130eaf081b739593843895d18c8109e0f6e`.
+- [Successful run](https://github.com/xMelissaa/first-move/actions/runs/42091840932), completed November 5, 2026.
+- Unit suites: ChessParityTests (3), ChessPositionTests (20), PositionHistoryTests (2), ProgressTests (8), TrainingBotTests (2).
+- UI suite: FirstMoveUITests (2), covering real launch/interaction/persistence.
+- The captured learning-path screen was visually inspected after the run.
+- All 39 uploaded source files matched their local Git blob hashes before this documentation update.
+
+## Remaining signed-release checks
+
+No physical iPhone, signed TestFlight upload, Apple sign-in entitlement, or iCloud round-trip has been tested yet. Those require the user's Apple developer enrollment and signing setup. Check smaller iPhone layouts, larger accessibility text, VoiceOver navigation, and two-device cloud synchronization before release. A passing simulator run is evidence for the tested configuration, not a guarantee of mistake-free software.

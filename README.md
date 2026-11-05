@@ -2,6 +2,8 @@
 
 A native iPhone chess trainer for complete beginners. Built in SwiftUI, with an original ivory-and-forest-green design, a friendly rook character, and a course you can use offline.
 
+<img src="docs/FirstMove-iPhone.png" width="320" alt="First Move running on the iPhone Air simulator, showing the learning path and daily goal." />
+
 ## What is implemented
 
 - A 32-lesson learning path across eight units: pieces, rules, openings, tactics, attack and defense, planning, endgames, and a thinking routine.
@@ -17,7 +19,9 @@ No course promises mistake-free games. First Move builds a foundation and habits
 
 ## Current status
 
-This is a source project with a prepared cloud build, not a signed iPhone installer. The content validators and Swift syntax checks pass. Apple compilation, XCTest execution, simulator layout checks, and signed-device Apple/iCloud checks have **not** yet run. Do not treat the app as release-verified until those checks pass.
+The native app compiled successfully with Xcode 26.6 on a hosted Mac on November 5, 2026. All **35 unit tests and 2 UI tests passed**, with zero failures, on an iPhone Air simulator. The captured learning-path screenshot was visually inspected. [View the successful build](https://github.com/xMelissaa/first-move/actions/runs/42091840932).
+
+The tested app source is commit `927d5130eaf081b739593843895d18c8109e0f6e`. This package is source, not a signed iPhone installer. Apple sign-in, iCloud round trips, TestFlight distribution, and physical-device checks remain for the signed release after Apple enrollment.
 
 You do not need to own a Mac. Follow [CLOUD-BUILD.md](CLOUD-BUILD.md) to use GitHub's hosted Mac for an unsigned simulator build and tests. GitHub usage limits depend on your account. A simulator `.app` is not an iPhone installer.
 
@@ -52,7 +56,7 @@ The lockfile also supports pnpm. Tooling dependencies are not shipped inside the
 
 ## Before a signed release
 
-1. Run the Mac cloud workflow and fix any compiler, test, or simulator-layout failures.
+1. Keep the Mac cloud workflow passing after source changes; review its simulator screenshots for layout changes.
 2. Register your own permanent bundle ID; replace the placeholder `org.firstmove.chess` before signing.
 3. Configure Apple sign-in and iCloud key-value capabilities on that App ID and use a matching distribution profile.
 4. Test Apple account login, revocation, offline relaunch, two-device sync, backup restore, and deletion on signed devices. iCloud sync is eventual; the UI reports enabled sync, not a delivery receipt.
