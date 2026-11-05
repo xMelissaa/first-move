@@ -1,0 +1,1381 @@
+{
+  "units": [
+    {
+      "id": "first-moves",
+      "title": "Meet your pieces",
+      "subtitle": "The board, the pieces, and your very first moves.",
+      "icon": "checkerboard.rectangle",
+      "color": "#8066DA"
+    },
+    {
+      "id": "play-by-the-rules",
+      "title": "Play by the rules",
+      "subtitle": "Keep your king safe and learn the special moves.",
+      "icon": "shield.lefthalf.filled",
+      "color": "#5D8D87"
+    },
+    {
+      "id": "a-strong-start",
+      "title": "A strong start",
+      "subtitle": "Build an opening you understand, one move at a time.",
+      "icon": "sun.max.fill",
+      "color": "#C48B43"
+    },
+    {
+      "id": "spot-the-pattern",
+      "title": "Spot the pattern",
+      "subtitle": "Discover the small tactics that change a game.",
+      "icon": "sparkles",
+      "color": "#8B70CB"
+    },
+    {
+      "id": "attack-and-defend",
+      "title": "Attack and defend",
+      "subtitle": "Recognize danger and turn your pieces into a team.",
+      "icon": "bolt.shield.fill",
+      "color": "#B7737B"
+    },
+    {
+      "id": "make-a-plan",
+      "title": "Make a plan",
+      "subtitle": "Improve your position when there is no quick tactic.",
+      "icon": "map.fill",
+      "color": "#648BA9"
+    },
+    {
+      "id": "finish-well",
+      "title": "Finish well",
+      "subtitle": "Activate your king, help your pawns, and deliver mate.",
+      "icon": "flag.checkered",
+      "color": "#B28D4C"
+    },
+    {
+      "id": "your-thinking-routine",
+      "title": "Your thinking routine",
+      "subtitle": "Bring your skills together before every move.",
+      "icon": "brain.head.profile",
+      "color": "#737CB5"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "meet-the-board",
+      "unit": "first-moves",
+      "title": "A whole new board",
+      "summary": "Learn the coordinates and the goal of chess.",
+      "xp": 30,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "64 squares. Endless possibilities.",
+          "body": "Chess is played on an eight-by-eight board. Each player starts with 16 pieces. White moves first; then the players take turns, making one move each.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+        },
+        {
+          "type": "read",
+          "title": "Every square has an address",
+          "body": "Files run from a to h. Ranks run from 1 to 8. Put the letter first: e4 means the e-file and the fourth rank. From White’s side, the near-right corner is the light square h1.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "highlights": [
+            "a1",
+            "h1",
+            "e4"
+          ]
+        },
+        {
+          "type": "choice",
+          "prompt": "Which address means the e-file and the fourth rank?",
+          "options": [
+            "4e",
+            "e4",
+            "e8"
+          ],
+          "answer": 1,
+          "explanation": "Letter first, number second: e4."
+        },
+        {
+          "type": "choice",
+          "prompt": "What is the goal of chess?",
+          "options": [
+            "Capture every piece",
+            "Checkmate the opposing king",
+            "Reach the other side with your king"
+          ],
+          "answer": 1,
+          "explanation": "Checkmate means the king is attacked and there is no legal way to escape. Kings are never captured."
+        }
+      ]
+    },
+    {
+      "id": "rooks-and-bishops",
+      "unit": "first-moves",
+      "title": "Straight lines & diagonals",
+      "summary": "Move rooks and bishops, and make your first captures.",
+      "xp": 35,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Meet the rook",
+          "body": "A rook moves any number of squares along one file or rank. It stops at the first occupied square. It may capture an enemy piece there, but it cannot jump over pieces or land on a friendly piece."
+        },
+        {
+          "type": "move",
+          "prompt": "Capture the bishop on a7 with your rook.",
+          "fen": "6k1/b5pp/8/8/8/8/6PP/R5K1 w - - 0 1",
+          "accept": [
+            "a1a7"
+          ],
+          "explanation": "The rook travels up the a-file and replaces the bishop on a7. The bishop leaves the board.",
+          "hint": "Tap the rook on a1, then tap a7.",
+          "orientation": "white"
+        },
+        {
+          "type": "read",
+          "title": "Meet the bishop",
+          "body": "A bishop moves along diagonals, without jumping. A bishop always stays on the same square color it started on. Together, two bishops can watch both colors."
+        },
+        {
+          "type": "move",
+          "prompt": "Capture the rook on b5 with your bishop.",
+          "fen": "6k1/5ppp/8/1r6/8/8/5PPP/5BK1 w - - 0 1",
+          "accept": [
+            "f1b5"
+          ],
+          "explanation": "The clear diagonal runs f1–e2–d3–c4–b5. Bishops travel diagonally, even when they capture.",
+          "hint": "Start at f1. Follow the diagonal up and left to b5.",
+          "orientation": "white"
+        }
+      ]
+    },
+    {
+      "id": "queen-and-knight",
+      "unit": "first-moves",
+      "title": "Power & a little hop",
+      "summary": "Explore the queen and the knight’s unusual move.",
+      "xp": 35,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Meet the queen",
+          "body": "A queen combines a rook’s straight lines with a bishop’s diagonals. It can travel far, but it still cannot jump over pieces. A powerful piece needs protection too."
+        },
+        {
+          "type": "move",
+          "prompt": "Use your queen to capture the pawn on h5.",
+          "fen": "6k1/6pp/8/7p/8/8/6PP/3Q2K1 w - - 0 1",
+          "accept": [
+            "d1h5"
+          ],
+          "explanation": "The queen follows the diagonal from d1 to h5. Its long range does not let it turn a corner during a move.",
+          "hint": "From d1, trace e2, f3, g4, then h5.",
+          "orientation": "white"
+        },
+        {
+          "type": "read",
+          "title": "Meet the knight",
+          "body": "A knight moves two squares in one direction and one square sideways: an L shape. It is the only piece that can jump over other pieces. Every knight move changes square color."
+        },
+        {
+          "type": "move",
+          "prompt": "Move the knight on g1 to f3.",
+          "fen": "6k1/6pp/8/8/8/8/5PPP/6NK w - - 0 1",
+          "accept": [
+            "g1f3"
+          ],
+          "explanation": "The knight jumps two ranks forward and one file left. A knight does not need a clear path between its starting and finishing squares.",
+          "hint": "Tap g1, then f3. Think two up and one left.",
+          "orientation": "white"
+        }
+      ]
+    },
+    {
+      "id": "king-and-pawns",
+      "unit": "first-moves",
+      "title": "Small steps matter",
+      "summary": "Guide your king and learn how pawns move and capture.",
+      "xp": 40,
+      "minutes": 5,
+      "steps": [
+        {
+          "type": "read",
+          "title": "The king moves carefully",
+          "body": "The king normally moves one square in any direction. It may never move into attack. Two kings cannot stand next to each other, because each would attack the other."
+        },
+        {
+          "type": "move",
+          "prompt": "Move your king one square diagonally, from d2 to e3.",
+          "fen": "7k/p7/8/8/8/8/P2K4/8 w - - 0 1",
+          "accept": [
+            "d2e3"
+          ],
+          "explanation": "e3 is adjacent to d2 and is not attacked by Black. A king’s destination must be safe.",
+          "hint": "Tap the king on d2, then the square e3.",
+          "orientation": "white"
+        },
+        {
+          "type": "read",
+          "title": "A pawn’s two different jobs",
+          "body": "White pawns advance toward rank 8; Black pawns advance toward rank 1. A pawn normally advances one empty square. From its starting rank it may advance two, if both squares are empty. It captures one square diagonally forward and never moves backward."
+        },
+        {
+          "type": "move",
+          "prompt": "Give your e-pawn its first two-square advance.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "accept": [
+            "e2e4"
+          ],
+          "explanation": "Both e3 and e4 are empty, so the pawn may advance from its starting square e2 to e4.",
+          "hint": "Tap e2, then e4.",
+          "orientation": "white"
+        },
+        {
+          "type": "move",
+          "prompt": "Capture Black’s pawn with your pawn.",
+          "fen": "6k1/6pp/8/4p3/3P4/8/6PP/6K1 w - - 0 1",
+          "accept": [
+            "d4e5"
+          ],
+          "explanation": "A pawn captures diagonally. Your pawn moves from d4 to e5 and removes the black pawn.",
+          "hint": "The white pawn is on d4. Its capture is one square forward and right.",
+          "orientation": "white"
+        }
+      ]
+    },
+    {
+      "id": "answering-check",
+      "unit": "play-by-the-rules",
+      "title": "Your king is in check",
+      "summary": "Recognize check and find a legal escape.",
+      "xp": 40,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Check needs an answer",
+          "body": "A king is in check when an enemy piece attacks its square. Your next move must remove that attack. Usually you can move the king, capture the checking piece, or block its line. Not every option works in every position."
+        },
+        {
+          "type": "move",
+          "prompt": "Your king is in check. Block the rook’s line with your bishop.",
+          "fen": "4r1k1/6pp/8/8/8/8/8/4KB2 w - - 0 1",
+          "accept": [
+            "f1e2"
+          ],
+          "explanation": "Be2 places the bishop between the rook on e8 and your king on e1. Blocking works against a distant rook, bishop, or queen, but not against a knight’s jump.",
+          "hint": "The rook is checking down the e-file. Move the bishop from f1 to e2.",
+          "orientation": "white"
+        },
+        {
+          "type": "move",
+          "prompt": "This checking rook is undefended. Capture it with your king.",
+          "fen": "6k1/6pp/8/8/8/8/4r3/4K3 w - - 0 1",
+          "accept": [
+            "e1e2"
+          ],
+          "explanation": "Kxe2 removes the checking rook. This capture is legal because e2 is not attacked by any remaining black piece.",
+          "hint": "Tap your king on e1, then the rook on e2.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "May you ignore check to capture a queen somewhere else?",
+          "options": [
+            "Yes, the queen is worth more",
+            "Only if your capture also removes the check",
+            "Yes, for one move"
+          ],
+          "answer": 1,
+          "explanation": "Your own king must be safe after every move. Material never makes an illegal move legal."
+        }
+      ]
+    },
+    {
+      "id": "mate-or-draw",
+      "unit": "play-by-the-rules",
+      "title": "Mate, or a draw?",
+      "summary": "Tell checkmate and stalemate apart.",
+      "xp": 35,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "The game ends at checkmate",
+          "body": "If a king is in check and no legal move can remove the check, it is checkmate. The game ends immediately. You do not make another move to capture the king.",
+          "fen": "7k/6Q1/5K2/8/8/8/8/8 b - - 0 1"
+        },
+        {
+          "type": "choice",
+          "prompt": "Black is to move here. What is the result?",
+          "options": [
+            "Checkmate: White wins",
+            "Stalemate: a draw",
+            "Black can capture the queen"
+          ],
+          "answer": 0,
+          "explanation": "The queen checks h8, covers g8 and h7, and is protected by the white king. Black has no legal escape.",
+          "fen": "7k/6Q1/5K2/8/8/8/8/8 b - - 0 1"
+        },
+        {
+          "type": "choice",
+          "prompt": "Black is to move in this different position. What is the result?",
+          "options": [
+            "White wins because Black cannot move",
+            "Stalemate: a draw",
+            "Black must pass"
+          ],
+          "answer": 1,
+          "explanation": "The black king is not in check, but Black has no legal move. That is stalemate, so the game is drawn.",
+          "fen": "7k/5K2/6Q1/8/8/8/8/8 b - - 0 1"
+        },
+        {
+          "type": "read",
+          "title": "More ways to draw",
+          "body": "A game is also drawn when no possible sequence of legal moves can lead to checkmate, such as king against king. Draws can also arise by agreement or repetition and move-count rules. Under FIDE rules, threefold repetition and 50 moves by each player without a pawn move or capture normally require a claim; fivefold repetition and 75 such moves are automatic, unless the last move checkmates."
+        }
+      ]
+    },
+    {
+      "id": "castle-safely",
+      "unit": "play-by-the-rules",
+      "title": "A move for two pieces",
+      "summary": "Learn castling and the safety rules that govern it.",
+      "xp": 40,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Meet castling",
+          "body": "Castling moves your king two squares toward a rook; that rook goes to the square the king crossed. Both must still have their castling rights, and every square between them must be empty. If the king or that rook moved earlier, moving it back does not restore the right.",
+          "fen": "r3k2r/ppp2ppp/8/8/8/8/PPP2PPP/R3K2R w KQkq - 0 1"
+        },
+        {
+          "type": "move",
+          "prompt": "Castle kingside with White.",
+          "fen": "r3k2r/ppp2ppp/8/8/8/8/PPP2PPP/R3K2R w KQkq - 0 1",
+          "accept": [
+            "e1g1"
+          ],
+          "explanation": "The king goes from e1 to g1 and the rook goes from h1 to f1. It counts as one move. In the trainer, select the king’s destination.",
+          "hint": "Tap the king on e1, then g1.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Can White castle kingside in this position?",
+          "options": [
+            "Yes, the squares are empty",
+            "No, the king would cross an attacked square",
+            "No, castling always needs a pawn move first"
+          ],
+          "answer": 1,
+          "explanation": "The rook on f8 attacks f1. A king may not castle out of check, through check, or into check, even when the path is empty.",
+          "fen": "4kr2/8/8/8/8/8/8/4K2R w K - 0 1"
+        },
+        {
+          "type": "choice",
+          "prompt": "After White castles queenside, where do the king and rook finish?",
+          "options": [
+            "King b1, rook c1",
+            "King c1, rook d1",
+            "King d1, rook c1"
+          ],
+          "answer": 1,
+          "explanation": "Queenside castling ends with the king on c1 and the rook on d1. The rook may cross an attacked square; the king may not."
+        }
+      ]
+    },
+    {
+      "id": "pawn-surprises",
+      "unit": "play-by-the-rules",
+      "title": "Pawns have surprises",
+      "summary": "Try en passant, promotion, and the choice of a new piece.",
+      "xp": 45,
+      "minutes": 5,
+      "steps": [
+        {
+          "type": "read",
+          "title": "One brief opportunity",
+          "body": "If an enemy pawn has just advanced two squares and lands alongside your pawn, your pawn may capture it as if it had advanced only one square. This is en passant. It is available only on the very next move and only if your own king remains safe."
+        },
+        {
+          "type": "move",
+          "prompt": "Black just played d7–d5. Capture that pawn en passant.",
+          "fen": "6k1/6pp/8/3pP3/8/8/6PP/6K1 w - d6 0 2",
+          "accept": [
+            "e5d6"
+          ],
+          "explanation": "Your pawn moves from e5 to d6. The pawn on d5 is removed. En passant is the special capture where the captured pawn is not on your destination square.",
+          "hint": "Move e5 to d6, the square the black pawn passed over.",
+          "orientation": "white"
+        },
+        {
+          "type": "read",
+          "title": "Reach the final rank",
+          "body": "A pawn that reaches its final rank must immediately become a queen, rook, bishop, or knight of the same color. It cannot stay a pawn or become a king. You may choose a piece even if none of that kind has been captured."
+        },
+        {
+          "type": "move",
+          "prompt": "Promote the a-pawn to a queen.",
+          "fen": "7k/P7/6K1/8/8/8/8/8 w - - 0 1",
+          "accept": [
+            "a7a8q"
+          ],
+          "explanation": "The pawn reaches a8 and becomes a queen as part of the same move. When the app asks which piece to choose, select the queen.",
+          "hint": "Move a7 to a8 and choose a queen.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Must you always choose a queen when promoting?",
+          "options": [
+            "Yes, every promotion is a queen",
+            "No, a rook, bishop, or knight is also allowed",
+            "No, you may choose a second king"
+          ],
+          "answer": 1,
+          "explanation": "Choosing a rook, bishop, or knight is called underpromotion. Sometimes it avoids stalemate or creates a useful knight check. Choose for the position."
+        }
+      ]
+    },
+    {
+      "id": "claim-the-center",
+      "unit": "a-strong-start",
+      "title": "Make room in the middle",
+      "summary": "Use a central pawn to create space for your pieces.",
+      "xp": 30,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "The center connects the board",
+          "body": "The four central squares are d4, e4, d5, and e5. Pieces near the center can often reach more of the board. Moving a central pawn can claim space and open paths for your bishops.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "highlights": [
+            "d4",
+            "e4",
+            "d5",
+            "e5"
+          ]
+        },
+        {
+          "type": "move",
+          "prompt": "Advance either your d-pawn or your e-pawn two squares.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "accept": [
+            "d2d4",
+            "e2e4"
+          ],
+          "explanation": "Both d4 and e4 are sensible ways to begin. There are other playable openings too: the goal is to understand your plan, not memorize one compulsory first move.",
+          "hint": "Choose d2–d4 or e2–e4.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Why can a central pawn move help your opening?",
+          "options": [
+            "It immediately wins a piece",
+            "It gains space and opens lines for pieces",
+            "It lets the king move like a queen"
+          ],
+          "answer": 1,
+          "explanation": "Central pawns can gain space and free a bishop. You still need to develop the rest of your team."
+        }
+      ]
+    },
+    {
+      "id": "develop-your-team",
+      "unit": "a-strong-start",
+      "title": "Bring out your team",
+      "summary": "Develop a knight and a bishop to useful squares.",
+      "xp": 40,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Development means participation",
+          "body": "A piece is developed when it leaves its starting square for a useful job. In the opening, get several pieces involved, influence the center, and look after your king. Avoid moving one piece repeatedly without a clear reason."
+        },
+        {
+          "type": "move",
+          "prompt": "Develop your kingside knight to f3.",
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+          "accept": [
+            "g1f3"
+          ],
+          "explanation": "Nf3 develops a knight, watches central squares, and attacks the pawn on e5. One move can do more than one useful job.",
+          "hint": "The knight begins on g1. Its destination is f3.",
+          "orientation": "white"
+        },
+        {
+          "type": "move",
+          "prompt": "Now develop your bishop to c4.",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+          "accept": [
+            "f1c4"
+          ],
+          "explanation": "Bc4 brings another piece into play and clears f1, helping prepare kingside castling. Its diagonal points toward f7.",
+          "hint": "Move the bishop along f1–e2–d3–c4.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "You can improve a new piece or move your developed knight again for no clear reason. What is the better habit?",
+          "options": [
+            "Usually involve the new piece",
+            "Always move the knight again",
+            "Always bring the queen out first"
+          ],
+          "answer": 0,
+          "explanation": "Develop your team efficiently. A concrete threat can justify moving a piece again, so check the position before applying a rule of thumb."
+        }
+      ]
+    },
+    {
+      "id": "home-for-your-king",
+      "unit": "a-strong-start",
+      "title": "A home for your king",
+      "summary": "Connect development to king safety.",
+      "xp": 35,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Give your king a plan",
+          "body": "Castling often tucks the king behind pawns and brings a rook closer to the center. It is a useful opening goal, not an automatic command: first check that castling is legal and that the destination is sensible."
+        },
+        {
+          "type": "move",
+          "prompt": "Your pieces have cleared the way. Castle kingside.",
+          "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+          "accept": [
+            "e1g1"
+          ],
+          "explanation": "The king reaches g1, with pawns nearby for shelter. The rook arrives on f1. All three king squares e1, f1, and g1 are safe.",
+          "hint": "Select the king on e1, then g1.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "What should you check before any castle?",
+          "options": [
+            "Only whether the squares are empty",
+            "Rights, a clear path, and the king’s safety",
+            "Whether your queen has moved"
+          ],
+          "answer": 1,
+          "explanation": "You need castling rights, empty intervening squares, and a king that does not start in, cross, or finish in check."
+        }
+      ]
+    },
+    {
+      "id": "notice-early-threats",
+      "unit": "a-strong-start",
+      "title": "Notice the early threat",
+      "summary": "Respond to a queen-and-bishop attack without panic.",
+      "xp": 40,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Look at what changed",
+          "body": "An early queen can create threats, but it can also become a target. After every enemy move, look at the new attacks. Here the queen on h5 and bishop on c4 both look toward f7.",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+          "highlights": [
+            "h5",
+            "c4",
+            "f7"
+          ]
+        },
+        {
+          "type": "choice",
+          "prompt": "Which pawn is attacked by both White’s queen and bishop?",
+          "options": [
+            "a7",
+            "d7",
+            "f7"
+          ],
+          "answer": 2,
+          "explanation": "The queen’s diagonal h5–g6–f7 and the bishop’s diagonal c4–d5–e6–f7 meet on f7."
+        },
+        {
+          "type": "move",
+          "prompt": "You are playing Black. Advance g7–g6 to block the queen’s diagonal and attack it.",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+          "accept": [
+            "g7g6"
+          ],
+          "explanation": "The pawn on g6 interrupts the queen’s route to f7 and attacks the queen on h5. This answers this position’s immediate threat; keep checking what White does next.",
+          "hint": "It is Black’s turn. Move the black pawn from g7 to g6.",
+          "orientation": "white"
+        }
+      ]
+    },
+    {
+      "id": "free-pieces",
+      "unit": "spot-the-pattern",
+      "title": "What is undefended?",
+      "summary": "Spot a loose piece before starting a complicated plan.",
+      "xp": 35,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "First, notice what is loose",
+          "body": "An undefended piece has no friendly piece protecting its square. Before capturing it, still check whether your king is safe and whether the capture walks into a trap. A large reward is a reason to calculate, not to skip calculation."
+        },
+        {
+          "type": "move",
+          "prompt": "Capture the undefended queen on a7 with your rook.",
+          "fen": "6k1/q5pp/8/8/8/8/6PP/R5K1 w - - 0 1",
+          "accept": [
+            "a1a7"
+          ],
+          "explanation": "Rxa7 wins the queen. Nothing blocks the a-file, and no black piece can immediately recapture on a7.",
+          "hint": "Look straight up the a-file from your rook on a1.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "You notice an undefended piece. What should you do before taking it?",
+          "options": [
+            "Check king safety and the opponent’s reply",
+            "Capture it instantly every time",
+            "Ignore it because it might be a trap"
+          ],
+          "answer": 0,
+          "explanation": "A short safety check turns a tempting capture into an informed decision."
+        }
+      ]
+    },
+    {
+      "id": "knight-forks",
+      "unit": "spot-the-pattern",
+      "title": "Two threats, one move",
+      "summary": "Find a knight fork with check.",
+      "xp": 40,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "A fork attacks two targets",
+          "body": "A fork is a move that attacks two or more pieces at once. Knights are especially good at surprising targets on different lines. A fork with check is forcing: the opponent must first make the king safe."
+        },
+        {
+          "type": "move",
+          "prompt": "Move your knight to e7, checking the king and attacking the queen.",
+          "fen": "2q3k1/6pp/8/5N2/8/8/6PP/6K1 w - - 0 1",
+          "accept": [
+            "f5e7"
+          ],
+          "explanation": "Ne7+ attacks the king on g8 and the queen on c8. Black must answer the check, giving the knight a chance to capture the queen next.",
+          "hint": "From f5, jump one file left and two ranks up.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Why is a fork with check especially useful?",
+          "options": [
+            "The king’s safety must be addressed first",
+            "The opponent must skip a turn",
+            "Knights can capture two pieces in one move"
+          ],
+          "answer": 0,
+          "explanation": "The check forces a response. A knight still captures only one piece per move."
+        }
+      ]
+    },
+    {
+      "id": "the-pin",
+      "unit": "spot-the-pattern",
+      "title": "Held in place",
+      "summary": "See how a pin limits an enemy piece.",
+      "xp": 35,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "A line with something behind it",
+          "body": "A piece is pinned when moving it would expose something valuable behind it. An absolute pin has the king behind the piece: any move that exposes that king is illegal. A relative pin protects another valuable piece but does not make moving illegal."
+        },
+        {
+          "type": "move",
+          "prompt": "Move your bishop to b5 to pin the knight to the king.",
+          "fen": "4k3/8/2n5/8/8/8/8/4KB2 w - - 0 1",
+          "accept": [
+            "f1b5"
+          ],
+          "explanation": "The diagonal b5–c6–d7–e8 lines up bishop, knight, and king. The knight on c6 may not move if that would expose its king to the bishop.",
+          "hint": "Trace the bishop’s diagonal from f1 to b5.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Does pinning a piece always win it immediately?",
+          "options": [
+            "Yes, a pinned piece disappears",
+            "No, the opponent may defend it or break the pin",
+            "Yes, all pinned pieces must be captured"
+          ],
+          "answer": 1,
+          "explanation": "A pin creates a restriction. You still need a follow-up, and your opponent can try to escape the restriction."
+        }
+      ]
+    },
+    {
+      "id": "the-skewer",
+      "unit": "spot-the-pattern",
+      "title": "A target behind a target",
+      "summary": "Use a check to uncover the queen behind the king.",
+      "xp": 40,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Meet the skewer",
+          "body": "A skewer lines up two enemy targets. The valuable front piece is attacked and has to move, exposing the piece behind it. Rooks, bishops, and queens create skewers along straight lines or diagonals."
+        },
+        {
+          "type": "move",
+          "prompt": "Give check with Bb5 to skewer the king and queen.",
+          "fen": "4q3/3k4/8/8/8/8/4B3/6K1 w - - 0 1",
+          "accept": [
+            "e2b5"
+          ],
+          "explanation": "The bishop on b5 checks the king on d7. When the king leaves the diagonal, the queen on e8 is exposed to the bishop.",
+          "hint": "Move the bishop from e2 along d3 and c4 to b5.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "What is the difference between a pin and this skewer?",
+          "options": [
+            "In the skewer, the valuable front piece is driven away",
+            "A skewer is a knight jump",
+            "A pin only happens on a file"
+          ],
+          "answer": 0,
+          "explanation": "The king is in front in this skewer and must leave the line. In a pin to a king, another piece is in front and cannot expose it."
+        }
+      ]
+    },
+    {
+      "id": "back-rank-mate",
+      "unit": "attack-and-defend",
+      "title": "The back-rank pattern",
+      "summary": "Recognize a king trapped behind its own pawns.",
+      "xp": 40,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "A shelter can become a cage",
+          "body": "Pawns protect a castled king, but they can also block its escape squares. A rook or queen invading the back rank may checkmate if the king has no flight square and the checking piece cannot be captured or blocked."
+        },
+        {
+          "type": "move",
+          "prompt": "Deliver checkmate with your rook on the eighth rank.",
+          "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",
+          "accept": [
+            "a1a8"
+          ],
+          "explanation": "Ra8 is checkmate. The rook controls the eighth rank; Black’s own pawns occupy f7, g7, and h7. There is no capture or block available.",
+          "hint": "Move the rook straight from a1 to a8.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Before claiming mate, what must you rule out?",
+          "options": [
+            "King moves, captures, and blocks that remove check",
+            "Every possible pawn move anywhere",
+            "Only a queen capture"
+          ],
+          "answer": 0,
+          "explanation": "Checkmate means every legal answer to the check is unavailable. Scan each kind of escape."
+        }
+      ]
+    },
+    {
+      "id": "protected-queen-mate",
+      "unit": "attack-and-defend",
+      "title": "The queen needs a friend",
+      "summary": "Coordinate king and queen for a close-range mate.",
+      "xp": 40,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "A powerful piece still needs support",
+          "body": "A queen next to a king may be captured unless another piece protects it. In an endgame, your king can protect your queen and cover escape squares. Coordinate them without letting your kings touch."
+        },
+        {
+          "type": "move",
+          "prompt": "Place your queen on g7 to checkmate.",
+          "fen": "7k/8/5KQ1/8/8/8/8/8 w - - 0 1",
+          "accept": [
+            "g6g7"
+          ],
+          "explanation": "Qg7 is checkmate. The queen attacks h8 and covers the escape squares; the king on f6 protects g7, so Black cannot capture the queen.",
+          "hint": "Move the queen one square up from g6 to g7.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Why can Black not capture the queen on g7?",
+          "options": [
+            "The queen is protected by White’s king",
+            "Kings cannot capture queens",
+            "The queen is too powerful to capture"
+          ],
+          "answer": 0,
+          "explanation": "Kings may capture queens on safe squares. Here g7 is attacked by the white king, so Kxg7 would be illegal."
+        }
+      ]
+    },
+    {
+      "id": "defend-with-purpose",
+      "unit": "attack-and-defend",
+      "title": "Defend with purpose",
+      "summary": "Avoid moving a pinned piece off the line of your king.",
+      "xp": 40,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Defense can be active",
+          "body": "When a piece is tied to protecting your king, check its legal moves carefully. Sometimes it can move along the line of the pin or capture the pinning piece. Defense is not always retreating."
+        },
+        {
+          "type": "choice",
+          "prompt": "Can the white rook capture Black’s queen on a2?",
+          "options": [
+            "Yes, queens are worth more than rooks",
+            "No, it would expose White’s king to the rook on e8",
+            "Only if the queen is undefended"
+          ],
+          "answer": 1,
+          "explanation": "Rxa2 would leave the e-file open between Black’s rook and White’s king. A move that exposes your own king is illegal.",
+          "fen": "4r1k1/8/8/8/8/8/q3R3/4K3 w - - 0 1"
+        },
+        {
+          "type": "move",
+          "prompt": "Remove the pin by capturing the black rook on e8.",
+          "fen": "4r1k1/8/8/8/8/8/q3R3/4K3 w - - 0 1",
+          "accept": [
+            "e2e8"
+          ],
+          "explanation": "Rxe8+ stays on the e-file and removes the pinning rook. Your king remains safe, and the capture also gives check.",
+          "hint": "Move your rook straight up from e2 to e8.",
+          "orientation": "white"
+        }
+      ]
+    },
+    {
+      "id": "calculate-the-reply",
+      "unit": "attack-and-defend",
+      "title": "Think one reply further",
+      "summary": "Practice the habit of looking for the opponent’s answer.",
+      "xp": 35,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Your opponent gets a turn",
+          "body": "A good-looking move is a candidate, not a conclusion. Imagine your move, then look for the opponent’s strongest checks, captures, and threats. Stop only when you can explain why your idea is safe enough."
+        },
+        {
+          "type": "move",
+          "prompt": "Capture the rook on e8 with your rook and notice the check.",
+          "fen": "4r1k1/8/8/8/8/8/8/3QR1K1 w - - 0 1",
+          "accept": [
+            "e1e8"
+          ],
+          "explanation": "Rxe8+ captures a rook and checks the king on g8. Black still gets a legal reply: a check is not automatically checkmate.",
+          "hint": "The rooks share the clear e-file. Move e1 to e8.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "After calculating your intended move, whose options do you examine next?",
+          "options": [
+            "Only your next move",
+            "Your opponent’s most forcing replies",
+            "The moves you hope your opponent plays"
+          ],
+          "answer": 1,
+          "explanation": "Calculate against a strong reply, not just a convenient reply. This is one of the most useful habits for reducing avoidable mistakes."
+        }
+      ]
+    },
+    {
+      "id": "piece-activity",
+      "unit": "make-a-plan",
+      "title": "Give a piece a better job",
+      "summary": "Improve a quiet position by activating a knight.",
+      "xp": 35,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Ask which piece needs help",
+          "body": "When no tactic demands attention, compare your pieces. A useful improvement gives a piece more safe squares, a target, or a defensive job. Activity matters more than simply moving a piece toward the opponent."
+        },
+        {
+          "type": "move",
+          "prompt": "Bring the knight from a3 to the more central square c4.",
+          "fen": "6k1/5ppp/8/8/8/N7/5PPP/6K1 w - - 0 1",
+          "accept": [
+            "a3c4"
+          ],
+          "explanation": "Nc4 moves the knight away from the edge and gives it more possible destinations. In a real game, also check whether an enemy pawn can chase it away.",
+          "hint": "The knight’s L-shaped jump goes two files right and one rank up.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Before occupying an attractive square, what should you check?",
+          "options": [
+            "Whether it can be attacked or trapped",
+            "Whether it is the same color as your queen",
+            "Whether the piece has moved before"
+          ],
+          "answer": 0,
+          "explanation": "A square is useful when the piece can work there safely. Look especially for enemy pawn attacks."
+        }
+      ]
+    },
+    {
+      "id": "pawn-structure",
+      "unit": "make-a-plan",
+      "title": "Read the pawn landscape",
+      "summary": "Recognize doubled and isolated pawns without judging by labels alone.",
+      "xp": 30,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Pawns shape the position",
+          "body": "Pawns cannot go backward, so their moves leave lasting changes. An isolated pawn has no friendly pawn on either adjacent file. Doubled pawns are two friendly pawns on one file. These features can bring weaknesses, open lines, or useful control."
+        },
+        {
+          "type": "choice",
+          "prompt": "Which pair of White’s pawns is doubled?",
+          "options": [
+            "a2 and h2",
+            "c3 and c4",
+            "c4 and h2"
+          ],
+          "answer": 1,
+          "explanation": "The c3 and c4 pawns share the c-file. That makes them doubled pawns.",
+          "fen": "6k1/5ppp/8/8/2P5/2P5/P6P/6K1 w - - 0 1"
+        },
+        {
+          "type": "choice",
+          "prompt": "Does a doubled pawn automatically mean the position is losing?",
+          "options": [
+            "Yes, always",
+            "No, the whole position matters",
+            "No, doubled pawns always win"
+          ],
+          "answer": 1,
+          "explanation": "Pawn labels describe a structure. Judge the king safety, piece activity, targets, and concrete tactics before deciding who is better."
+        }
+      ]
+    },
+    {
+      "id": "open-files",
+      "unit": "make-a-plan",
+      "title": "Find a road for your rook",
+      "summary": "Place a rook on a file without pawns.",
+      "xp": 35,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Rooks like clear roads",
+          "body": "An open file has no pawns of either color. A half-open file has no pawn of your color but does have an enemy pawn. Rooks can use these files to reach targets or the seventh rank, if the entry squares are safe."
+        },
+        {
+          "type": "move",
+          "prompt": "Place your rook on the open d-file.",
+          "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",
+          "accept": [
+            "a1d1"
+          ],
+          "explanation": "Rd1 gives the rook a clear path along the d-file. This is a positional improvement exercise, not a claim that only one move is playable.",
+          "hint": "Slide the rook along the first rank from a1 to d1.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "What makes a file open?",
+          "options": [
+            "No pawns of either color are on it",
+            "No pieces of any kind are on it",
+            "Only White’s pawns are on it"
+          ],
+          "answer": 0,
+          "explanation": "Open and half-open describe pawn placement. Other pieces may still occupy or block an open file."
+        }
+      ]
+    },
+    {
+      "id": "build-a-plan",
+      "unit": "make-a-plan",
+      "title": "A plan you can explain",
+      "summary": "Choose small, useful goals and keep checking the position.",
+      "xp": 30,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "A plan starts with the position",
+          "body": "First handle urgent threats. Then ask: Is my king safe? Which piece is least active? Which pawn or square can I target? Choose a small goal your pieces can actually support."
+        },
+        {
+          "type": "choice",
+          "prompt": "You have a plan, but your opponent’s last move creates a checkmate threat. What comes first?",
+          "options": [
+            "Continue the plan unchanged",
+            "Answer the immediate threat",
+            "Move your weakest piece regardless"
+          ],
+          "answer": 1,
+          "explanation": "A plan is flexible. A concrete threat takes priority over a general improvement."
+        },
+        {
+          "type": "choice",
+          "prompt": "Which is a useful plan you can explain?",
+          "options": [
+            "Move randomly until a tactic appears",
+            "Improve my inactive rook on a safe open file",
+            "Attack because it is always my turn to attack"
+          ],
+          "answer": 1,
+          "explanation": "A useful plan names a piece, a destination or target, and a reason. Check that the actual move is safe before playing it."
+        }
+      ]
+    },
+    {
+      "id": "activate-your-king",
+      "unit": "finish-well",
+      "title": "Your king joins the team",
+      "summary": "Understand why kings can become active in endgames.",
+      "xp": 35,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Fewer attackers, a new role",
+          "body": "When queens and many other pieces are gone, the king often becomes an active fighter. It can help pawns advance and attack enemy pawns. Safety still matters: a king may never step into attack."
+        },
+        {
+          "type": "move",
+          "prompt": "Bring your king one step toward the center with Ke2.",
+          "fen": "4k3/p7/8/8/8/8/P7/4K3 w - - 0 1",
+          "accept": [
+            "e1e2"
+          ],
+          "explanation": "Ke2 makes progress toward the center while remaining safe. Endgame activity is useful when there is no immediate danger to the king.",
+          "hint": "Move the king from e1 to e2.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Why can a king often become more active in an endgame?",
+          "options": [
+            "The king is allowed to ignore check",
+            "There are fewer enemy pieces that can attack it",
+            "The king can now jump over pawns"
+          ],
+          "answer": 1,
+          "explanation": "Fewer attacking pieces can make central activity safer. The king’s legal moves never change."
+        }
+      ]
+    },
+    {
+      "id": "passed-pawns",
+      "unit": "finish-well",
+      "title": "A pawn with a clear road",
+      "summary": "Recognize a passed pawn and help it advance.",
+      "xp": 35,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Meet the passed pawn",
+          "body": "A passed pawn has no enemy pawn ahead of it on its file or either adjacent file. It can still be stopped by pieces or the enemy king. Support its advance, and count moves rather than assuming it will promote."
+        },
+        {
+          "type": "move",
+          "prompt": "Advance your passed a-pawn from a6 to a7.",
+          "fen": "8/7k/P7/5K2/8/8/8/8 w - - 0 1",
+          "accept": [
+            "a6a7"
+          ],
+          "explanation": "The pawn is one move from promotion after a7. The black king is far away, and no black pawn can block or capture it.",
+          "hint": "Tap the pawn on a6, then a7.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Can a passed pawn still be stopped?",
+          "options": [
+            "No, promotion is automatic",
+            "Yes, a king or another piece can stop it",
+            "Only by another pawn"
+          ],
+          "answer": 1,
+          "explanation": "Passed describes the enemy pawns, not all possible defenders. Always count how quickly a king or piece can reach it."
+        }
+      ]
+    },
+    {
+      "id": "opposition",
+      "unit": "finish-well",
+      "title": "Kings face to face",
+      "summary": "Meet opposition and why the move can matter.",
+      "xp": 35,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "One square between the kings",
+          "body": "In direct opposition, the kings face each other on a file or rank with one square between them. The player who does not have to move is often said to have the opposition. The moving king may have to give way, allowing the other king forward.",
+          "fen": "8/8/3k4/8/3KP3/8/8/8 w - - 0 1",
+          "highlights": [
+            "d4",
+            "d5",
+            "d6"
+          ]
+        },
+        {
+          "type": "choice",
+          "prompt": "White is to move here. Which side has the direct opposition?",
+          "options": [
+            "White",
+            "Black",
+            "Neither, because kings must be adjacent"
+          ],
+          "answer": 1,
+          "explanation": "The kings are on d4 and d6, with d5 between them. White has the move, so Black has the direct opposition."
+        },
+        {
+          "type": "choice",
+          "prompt": "Does having opposition guarantee winning every pawn ending?",
+          "options": [
+            "Yes, always",
+            "No, pawn placement and spare moves matter",
+            "Only when the kings can touch"
+          ],
+          "answer": 1,
+          "explanation": "Opposition is a tool. Pawn moves, key squares, and the exact king positions determine whether a pawn ending is won or drawn."
+        }
+      ]
+    },
+    {
+      "id": "rook-mating-net",
+      "unit": "finish-well",
+      "title": "Close the mating net",
+      "summary": "Finish a king-and-rook mating pattern.",
+      "xp": 40,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Limit, approach, finish",
+          "body": "With king and rook against a lone king, the rook can limit the enemy king’s space while your king covers escape squares. Move carefully: avoid losing the rook, avoid stalemate, and look for mate once the king reaches an edge."
+        },
+        {
+          "type": "move",
+          "prompt": "Your king covers g7 and h7. Use your rook to checkmate on the eighth rank.",
+          "fen": "7k/8/6K1/8/8/8/8/R7 w - - 0 1",
+          "accept": [
+            "a1a8"
+          ],
+          "explanation": "Ra8 is checkmate. The rook covers the eighth rank and the king on g6 covers g7 and h7. The pieces work together to close every escape.",
+          "hint": "Slide the rook from a1 all the way to a8.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "What does the white king contribute to this mate?",
+          "options": [
+            "It protects the a-file",
+            "It covers the escape squares on the seventh rank",
+            "It captures the black king"
+          ],
+          "answer": 1,
+          "explanation": "The rook supplies the check; the king covers g7 and h7. Checkmate comes from coordination."
+        }
+      ]
+    },
+    {
+      "id": "opponents-last-move",
+      "unit": "your-thinking-routine",
+      "title": "What did that move change?",
+      "summary": "Start every turn by understanding the opponent’s move.",
+      "xp": 30,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Begin on the other side",
+          "body": "Before searching for your own idea, inspect the opponent’s last move. Did it give check, attack a piece, uncover a line, or leave something undefended? Naming the change helps prevent autopilot."
+        },
+        {
+          "type": "choice",
+          "prompt": "Black’s knight has just arrived on e5. Which white piece is it attacking?",
+          "options": [
+            "The queen on d3",
+            "The king on g1",
+            "The pawn on h2"
+          ],
+          "answer": 0,
+          "explanation": "From e5, a knight attacks d3 among its L-shaped destinations. White should notice that the queen is now under attack.",
+          "fen": "6k1/6pp/8/4n3/8/3Q4/6PP/6K1 w - - 0 1"
+        },
+        {
+          "type": "choice",
+          "prompt": "What is the most useful first question after the opponent moves?",
+          "options": [
+            "What did that move threaten or change?",
+            "Can I repeat my previous move?",
+            "How fast can I make a move?"
+          ],
+          "answer": 0,
+          "explanation": "Understanding the change keeps your next decision connected to the actual position."
+        }
+      ]
+    },
+    {
+      "id": "candidate-moves",
+      "unit": "your-thinking-routine",
+      "title": "Compare a few ideas",
+      "summary": "Use checks, captures, and threats without falling for forcing-move tunnel vision.",
+      "xp": 30,
+      "minutes": 3,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Search before you choose",
+          "body": "After checking your king’s safety, list a few candidate moves. Forcing moves such as checks, captures, and threats are useful to examine early. Also consider a quiet defensive move or an improvement when the position calls for it."
+        },
+        {
+          "type": "choice",
+          "prompt": "Should you play the first check you notice?",
+          "options": [
+            "Yes, checks are always best",
+            "No, compare its consequences with other candidates",
+            "No, checking is only useful in endgames"
+          ],
+          "answer": 1,
+          "explanation": "A check can be strong, harmless, or losing. Calculate the reply and compare it with other moves."
+        },
+        {
+          "type": "choice",
+          "prompt": "Your candidates look similar. What helps you choose?",
+          "options": [
+            "Imagine a strong reply to each and compare the resulting positions",
+            "Choose the move that looks prettiest",
+            "Always choose a pawn move"
+          ],
+          "answer": 0,
+          "explanation": "Compare concrete results: king safety, material, activity, and threats. You do not need to calculate every legal move equally deeply."
+        }
+      ]
+    },
+    {
+      "id": "the-final-safety-check",
+      "unit": "your-thinking-routine",
+      "title": "One last safety check",
+      "summary": "Check threats and escape squares before you commit.",
+      "xp": 40,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "Pause before you play",
+          "body": "Before committing, ask: Is my king safe? Does this leave a piece undefended? What is the opponent’s strongest check or capture? A brief final scan catches many avoidable errors. Use your clock thoughtfully rather than spending the same time on every move."
+        },
+        {
+          "type": "move",
+          "prompt": "Create a flight square for your king by moving h2–h3.",
+          "fen": "r5k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",
+          "accept": [
+            "h2h3"
+          ],
+          "explanation": "h3 clears h2 for the king. If Black captures the rook on a1 with check, Kh2 is now available. A flight square can prevent a back-rank mate; check that the square itself is safe.",
+          "hint": "Move the pawn on h2 one square forward to h3.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "Does one safety routine make mistakes impossible?",
+          "options": [
+            "Yes, every move becomes perfect",
+            "No, but consistent checking can reduce avoidable mistakes",
+            "No, so checking is pointless"
+          ],
+          "answer": 1,
+          "explanation": "Chess remains challenging at every level. Good habits improve your decisions, and reviewing mistakes tells you what to practice next."
+        }
+      ]
+    },
+    {
+      "id": "ready-to-keep-learning",
+      "unit": "your-thinking-routine",
+      "title": "Your next game starts here",
+      "summary": "Combine a tactical pattern with a plan for steady improvement.",
+      "xp": 50,
+      "minutes": 4,
+      "steps": [
+        {
+          "type": "read",
+          "title": "You have a toolkit now",
+          "body": "You know how the pieces move, what makes a move legal, and how to look for threats, tactics, and useful plans. These are foundations, not a finish line. Practice games and thoughtful reviews help you turn knowledge into habits."
+        },
+        {
+          "type": "move",
+          "prompt": "Find the knight fork: check the king on e8 while attacking the rook on a8.",
+          "fen": "r3k3/8/8/1N6/8/8/8/6K1 w - - 0 1",
+          "accept": [
+            "b5c7"
+          ],
+          "explanation": "Nc7+ forks the king and rook. You recognized a pattern, checked that the move is legal, and created a forcing threat.",
+          "hint": "Jump the knight from b5 to c7.",
+          "orientation": "white"
+        },
+        {
+          "type": "choice",
+          "prompt": "How should you use outside move advice during a live game against another person?",
+          "options": [
+            "Use it secretly whenever the position is difficult",
+            "Follow the platform’s rules; keep engine help for allowed practice or review",
+            "Use it only when you are losing"
+          ],
+          "answer": 1,
+          "explanation": "Fair games let both players think for themselves. Use coaching in practice and post-game review, and follow the rules of the game you join."
+        },
+        {
+          "type": "choice",
+          "prompt": "What is a useful next step after a difficult game?",
+          "options": [
+            "Review one turning point and practice the idea you missed",
+            "Assume the whole course failed",
+            "Memorize moves without asking why"
+          ],
+          "answer": 0,
+          "explanation": "Pick one lesson from the game. Small, repeated improvements are more useful than demanding perfection from every move."
+        }
+      ]
+    }
+  ],
+  "rulesReference": {
+    "title": "FIDE Laws of Chess",
+    "url": "https://handbook.fide.com/chapter/e012023"
+  }
+}

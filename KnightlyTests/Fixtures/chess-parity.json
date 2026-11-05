@@ -1,0 +1,6791 @@
+{
+  "schemaVersion": 1,
+  "oracle": "chess.js@1.4.0",
+  "seed": "0x0F17C0DE",
+  "description": "Full legal move sets and sampled result states. Curated special-rule positions and color-reversed counterparts, original course diagrams, and seeded capture-weighted legal playouts sampled across both turns. FEN en-passant canonicalization can omit a target with no legal capture.",
+  "positions": [
+    {
+      "id": "castling-white-both",
+      "fen": "r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "e1c1",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e1f1",
+        "e1f2",
+        "e1g1",
+        "h1f1",
+        "h1g1",
+        "h1h2",
+        "h1h3",
+        "h1h4",
+        "h1h5",
+        "h1h6",
+        "h1h7",
+        "h1h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "r3k2r/8/8/8/8/8/R7/4K2R b Kkq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1c1",
+          "fen": "r3k2r/8/8/8/8/8/8/2KR3R b kq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1e2",
+          "fen": "r3k2r/8/8/8/8/8/4K3/R6R b kq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1g1",
+          "fen": "r3k2r/8/8/8/8/8/8/R4RK1 b kq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h1h8",
+          "fen": "r3k2R/8/8/8/8/8/8/R3K3 b Qq - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "castling-black-both",
+      "fen": "r3k2r/8/8/8/8/8/8/R3K2R b KQkq - 0 1",
+      "legalMoves": [
+        "a8a1",
+        "a8a2",
+        "a8a3",
+        "a8a4",
+        "a8a5",
+        "a8a6",
+        "a8a7",
+        "a8b8",
+        "a8c8",
+        "a8d8",
+        "e8c8",
+        "e8d7",
+        "e8d8",
+        "e8e7",
+        "e8f7",
+        "e8f8",
+        "e8g8",
+        "h8f8",
+        "h8g8",
+        "h8h1",
+        "h8h2",
+        "h8h3",
+        "h8h4",
+        "h8h5",
+        "h8h6",
+        "h8h7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a8a1",
+          "fen": "4k2r/8/8/8/8/8/8/r3K2R w Kk - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8c8",
+          "fen": "2kr3r/8/8/8/8/8/8/R3K2R w KQ - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8e7",
+          "fen": "r6r/4k3/8/8/8/8/8/R3K2R w KQ - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8g8",
+          "fen": "r4rk1/8/8/8/8/8/8/R3K2R w KQ - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h8h7",
+          "fen": "r3k3/7r/8/8/8/8/8/R3K2R w KQq - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "castling-white-through-check",
+      "fen": "4kr2/8/8/8/8/8/8/R3K2R w KQ - 0 1",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "e1c1",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "h1f1",
+        "h1g1",
+        "h1h2",
+        "h1h3",
+        "h1h4",
+        "h1h5",
+        "h1h6",
+        "h1h7",
+        "h1h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "4kr2/8/8/8/8/8/R7/4K2R b K - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1c1",
+          "fen": "4kr2/8/8/8/8/8/8/2KR3R b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1d1",
+          "fen": "4kr2/8/8/8/8/8/8/R2K3R b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h1h8",
+          "fen": "4kr1R/8/8/8/8/8/8/R3K3 b Q - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "castling-black-through-check",
+      "fen": "r3k2r/8/8/8/8/8/8/4KR2 b kq - 0 1",
+      "legalMoves": [
+        "a8a1",
+        "a8a2",
+        "a8a3",
+        "a8a4",
+        "a8a5",
+        "a8a6",
+        "a8a7",
+        "a8b8",
+        "a8c8",
+        "a8d8",
+        "e8c8",
+        "e8d7",
+        "e8d8",
+        "e8e7",
+        "h8f8",
+        "h8g8",
+        "h8h1",
+        "h8h2",
+        "h8h3",
+        "h8h4",
+        "h8h5",
+        "h8h6",
+        "h8h7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a8a1",
+          "fen": "4k2r/8/8/8/8/8/8/r3KR2 w k - 1 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8c8",
+          "fen": "2kr3r/8/8/8/8/8/8/4KR2 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8d7",
+          "fen": "r6r/3k4/8/8/8/8/8/4KR2 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h8h7",
+          "fen": "r3k3/7r/8/8/8/8/8/4KR2 w q - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "castling-out-of-check",
+      "fen": "4r1k1/8/8/8/8/8/8/R3K2R w KQ - 0 1",
+      "legalMoves": [
+        "e1d1",
+        "e1d2",
+        "e1f1",
+        "e1f2"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1d1",
+          "fen": "4r1k1/8/8/8/8/8/8/R2K3R b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1f1",
+          "fen": "4r1k1/8/8/8/8/8/8/R4K1R b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1f2",
+          "fen": "4r1k1/8/8/8/8/8/5K2/R6R b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "castling-rook-crosses-attacked-square",
+      "fen": "4k3/8/8/8/8/8/1r6/R3K3 w Q - 0 1",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "e1c1",
+        "e1d1",
+        "e1f1"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "4k3/8/8/8/8/8/Rr6/4K3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1a8",
+          "fen": "R3k3/8/8/8/8/8/1r6/4K3 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1c1",
+          "fen": "4k3/8/8/8/8/8/1r6/2KR4 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1f1",
+          "fen": "4k3/8/8/8/8/8/1r6/R4K2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "castling-rights-absent",
+      "fen": "r3k2r/8/8/8/8/8/8/R3K2R w - - 0 1",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e1f1",
+        "e1f2",
+        "h1f1",
+        "h1g1",
+        "h1h2",
+        "h1h3",
+        "h1h4",
+        "h1h5",
+        "h1h6",
+        "h1h7",
+        "h1h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "r3k2r/8/8/8/8/8/R7/4K2R b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1e2",
+          "fen": "r3k2r/8/8/8/8/8/4K3/R6R b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h1h8",
+          "fen": "r3k2R/8/8/8/8/8/8/R3K3 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "en-passant-pinned",
+      "fen": "7k/8/8/r4pPK/8/8/8/8 w - f6 0 1",
+      "legalMoves": [
+        "g5g6",
+        "h5g6",
+        "h5h4",
+        "h5h6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "g5g6",
+          "fen": "7k/8/6P1/r4p1K/8/8/8/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h5h4",
+          "fen": "7k/8/8/r4pP1/7K/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h5h6",
+          "fen": "7k/8/7K/r4pP1/8/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "en-passant-black",
+      "fen": "6k1/6pp/8/8/3Pp3/8/6PP/6K1 b - d3 0 2",
+      "legalMoves": [
+        "e4d3",
+        "e4e3",
+        "g7g5",
+        "g7g6",
+        "g8f7",
+        "g8f8",
+        "g8h8",
+        "h7h5",
+        "h7h6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e4d3",
+          "fen": "6k1/6pp/8/8/8/3p4/6PP/6K1 w - - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g8f7",
+          "fen": "8/5kpp/8/8/3Pp3/8/6PP/6K1 w - - 1 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h7h6",
+          "fen": "6k1/6p1/7p/8/3Pp3/8/6PP/6K1 w - - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "en-passant-escapes-check",
+      "fen": "7k/8/8/3pP3/4K3/8/8/8 w - d6 0 2",
+      "legalMoves": [
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e3",
+        "e4f3",
+        "e4f4",
+        "e4f5",
+        "e5d6"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e4d3",
+          "fen": "7k/8/8/3pP3/8/3K4/8/8 b - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e4f3",
+          "fen": "7k/8/8/3pP3/8/5K2/8/8 b - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e5d6",
+          "fen": "7k/8/3P4/8/4K3/8/8/8 b - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "en-passant-discovered-check",
+      "fen": "4k3/8/8/3pP3/8/8/8/4R1K1 w - d6 0 2",
+      "legalMoves": [
+        "e1a1",
+        "e1b1",
+        "e1c1",
+        "e1d1",
+        "e1e2",
+        "e1e3",
+        "e1e4",
+        "e1f1",
+        "e5d6",
+        "e5e6",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "g1h2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1a1",
+          "fen": "4k3/8/8/3pP3/8/8/8/R5K1 b - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1f1",
+          "fen": "4k3/8/8/3pP3/8/8/8/5RK1 b - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e5d6",
+          "fen": "4k3/8/3P4/8/8/8/8/4R1K1 b - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h2",
+          "fen": "4k3/8/8/3pP3/8/8/7K/4R3 b - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "promotion-white-captures",
+      "fen": "1r5k/P7/8/8/8/8/8/7K w - - 0 1",
+      "legalMoves": [
+        "a7a8b",
+        "a7a8n",
+        "a7a8q",
+        "a7a8r",
+        "a7b8b",
+        "a7b8n",
+        "a7b8q",
+        "a7b8r",
+        "h1g1",
+        "h1g2",
+        "h1h2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a8b",
+          "fen": "Br5k/8/8/8/8/8/8/7K b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7a8n",
+          "fen": "Nr5k/8/8/8/8/8/8/7K b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7a8q",
+          "fen": "Qr5k/8/8/8/8/8/8/7K b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7a8r",
+          "fen": "Rr5k/8/8/8/8/8/8/7K b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7b8b",
+          "fen": "1B5k/8/8/8/8/8/8/7K b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7b8n",
+          "fen": "1N5k/8/8/8/8/8/8/7K b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7b8q",
+          "fen": "1Q5k/8/8/8/8/8/8/7K b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7b8r",
+          "fen": "1R5k/8/8/8/8/8/8/7K b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h1h2",
+          "fen": "1r5k/P7/8/8/8/8/7K/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "promotion-black-captures",
+      "fen": "k7/8/8/8/8/8/6p1/K6R b - - 0 1",
+      "legalMoves": [
+        "a8a7",
+        "a8b7",
+        "a8b8",
+        "g2g1b",
+        "g2g1n",
+        "g2g1q",
+        "g2g1r",
+        "g2h1b",
+        "g2h1n",
+        "g2h1q",
+        "g2h1r"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a8a7",
+          "fen": "8/k7/8/8/8/8/6p1/K6R w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2g1b",
+          "fen": "k7/8/8/8/8/8/8/K5bR w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2g1n",
+          "fen": "k7/8/8/8/8/8/8/K5nR w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2g1q",
+          "fen": "k7/8/8/8/8/8/8/K5qR w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2g1r",
+          "fen": "k7/8/8/8/8/8/8/K5rR w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2h1b",
+          "fen": "k7/8/8/8/8/8/8/K6b w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2h1n",
+          "fen": "k7/8/8/8/8/8/8/K6n w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2h1q",
+          "fen": "k7/8/8/8/8/8/8/K6q w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2h1r",
+          "fen": "k7/8/8/8/8/8/8/K6r w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "pinned-knight-still-attacks",
+      "fen": "4k3/4n3/8/5K2/8/8/8/4R3 w - - 0 1",
+      "legalMoves": [
+        "e1e7",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f4",
+        "f5f6",
+        "f5g4",
+        "f5g5"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1e7",
+          "fen": "4k3/4R3/8/5K2/8/8/8/8 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f5f4",
+          "fen": "4k3/4n3/8/8/5K2/8/8/4R3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f5g5",
+          "fen": "4k3/4n3/8/6K1/8/8/8/4R3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "pinned-bishop-still-attacks",
+      "fen": "8/6k1/8/4b3/8/2B1K3/8/8 w - - 0 1",
+      "legalMoves": [
+        "c3a1",
+        "c3a5",
+        "c3b2",
+        "c3b4",
+        "c3d2",
+        "c3d4",
+        "c3e1",
+        "c3e5",
+        "e3d2",
+        "e3d3",
+        "e3e2",
+        "e3e4",
+        "e3f2",
+        "e3f3"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "c3a1",
+          "fen": "8/6k1/8/4b3/8/4K3/8/B7 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c3e5",
+          "fen": "8/6k1/8/4B3/8/4K3/8/8 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e3f3",
+          "fen": "8/6k1/8/4b3/8/2B2K2/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "double-check",
+      "fen": "4r1k1/8/8/8/1b6/8/8/4KB2 w - - 0 1",
+      "legalMoves": [
+        "e1d1",
+        "e1f2"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1d1",
+          "fen": "4r1k1/8/8/8/1b6/8/8/3K1B2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1f2",
+          "fen": "4r1k1/8/8/8/1b6/8/5K2/5B2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "dead-position-kings",
+      "fen": "7k/8/8/8/8/8/8/K7 w - - 0 1",
+      "legalMoves": [
+        "a1a2",
+        "a1b1",
+        "a1b2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "7k/8/8/8/8/8/K7/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1b1",
+          "fen": "7k/8/8/8/8/8/8/1K6 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1b2",
+          "fen": "7k/8/8/8/8/8/1K6/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "underpromotion-avoids-stalemate",
+      "fen": "8/k1P5/2K5/8/8/8/8/8 w - - 0 1",
+      "legalMoves": [
+        "c6b5",
+        "c6c5",
+        "c6d5",
+        "c6d6",
+        "c6d7",
+        "c7c8b",
+        "c7c8n",
+        "c7c8q",
+        "c7c8r"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "c6b5",
+          "fen": "8/k1P5/8/1K6/8/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c6d7",
+          "fen": "8/k1PK4/8/8/8/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c7c8b",
+          "fen": "2B5/k7/2K5/8/8/8/8/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c7c8n",
+          "fen": "2N5/k7/2K5/8/8/8/8/8 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c7c8q",
+          "fen": "2Q5/k7/2K5/8/8/8/8/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": true
+        },
+        {
+          "uci": "c7c8r",
+          "fen": "2R5/k7/2K5/8/8/8/8/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "high-move-counters",
+      "fen": "6k1/8/8/8/8/8/8/R5K1 w - - 149 90",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "a1e1",
+        "a1f1",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "g1h2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "6k1/8/8/8/8/8/R7/6K1 b - - 150 90",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1c1",
+          "fen": "6k1/8/8/8/8/8/8/2R3K1 b - - 150 90",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h2",
+          "fen": "6k1/8/8/8/8/8/7K/R7 b - - 150 90",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "kiwipete",
+      "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
+      "legalMoves": [
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "a2a3",
+        "a2a4",
+        "b2b3",
+        "c3a4",
+        "c3b1",
+        "c3b5",
+        "c3d1",
+        "d2c1",
+        "d2e3",
+        "d2f4",
+        "d2g5",
+        "d2h6",
+        "d5d6",
+        "d5e6",
+        "e1c1",
+        "e1d1",
+        "e1f1",
+        "e1g1",
+        "e2a6",
+        "e2b5",
+        "e2c4",
+        "e2d1",
+        "e2d3",
+        "e2f1",
+        "e5c4",
+        "e5c6",
+        "e5d3",
+        "e5d7",
+        "e5f7",
+        "e5g4",
+        "e5g6",
+        "f3d3",
+        "f3e3",
+        "f3f4",
+        "f3f5",
+        "f3f6",
+        "f3g3",
+        "f3g4",
+        "f3h3",
+        "f3h5",
+        "g2g3",
+        "g2g4",
+        "g2h3",
+        "h1f1",
+        "h1g1"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1b1",
+          "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/1R2K2R b Kkq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1c1",
+          "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/2KR3R b kq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1g1",
+          "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R4RK1 b kq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e2d1",
+          "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPB1PPP/R2BK2R b KQkq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h1g1",
+          "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K1R1 b Qkq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "rook-pawn-endgame",
+      "fen": "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1",
+      "legalMoves": [
+        "a5a4",
+        "a5a6",
+        "b4a4",
+        "b4b1",
+        "b4b2",
+        "b4b3",
+        "b4c4",
+        "b4d4",
+        "b4e4",
+        "b4f4",
+        "e2e3",
+        "e2e4",
+        "g2g3",
+        "g2g4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a5a4",
+          "fen": "8/2p5/3p4/1P5r/KR3p1k/8/4P1P1/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b4d4",
+          "fen": "8/2p5/3p4/KP5r/3R1p1k/8/4P1P1/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2g4",
+          "fen": "8/2p5/3p4/KP5r/1R3pPk/8/4P3/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-meet-the-board-0",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b2b3",
+        "b2b4",
+        "c2c3",
+        "c2c4",
+        "d2d3",
+        "d2d4",
+        "e2e3",
+        "e2e4",
+        "f2f3",
+        "f2f4",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/P7/1PPPPPPP/RNBQKBNR b KQkq - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e2e3",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rnbqkbnr/pppppppp/8/8/7P/8/PPPPPPP1/RNBQKBNR b KQkq - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-rooks-and-bishops-1",
+      "fen": "6k1/b5pp/8/8/8/8/6PP/R5K1 w - - 0 1",
+      "legalMoves": [
+        "a1a7",
+        "g1f1",
+        "g1h1"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a7",
+          "fen": "6k1/R5pp/8/8/8/8/6PP/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1f1",
+          "fen": "6k1/b5pp/8/8/8/8/6PP/R4K2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h1",
+          "fen": "6k1/b5pp/8/8/8/8/6PP/R6K b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-rooks-and-bishops-3",
+      "fen": "6k1/5ppp/8/1r6/8/8/5PPP/5BK1 w - - 0 1",
+      "legalMoves": [
+        "f1b5",
+        "f1c4",
+        "f1d3",
+        "f1e2",
+        "f2f3",
+        "f2f4",
+        "g1h1",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "f1b5",
+          "fen": "6k1/5ppp/8/1B6/8/8/5PPP/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f2f4",
+          "fen": "6k1/5ppp/8/1r6/5P2/8/6PP/5BK1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "6k1/5ppp/8/1r6/7P/8/5PP1/5BK1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-queen-and-knight-1",
+      "fen": "6k1/6pp/8/7p/8/8/6PP/3Q2K1 w - - 0 1",
+      "legalMoves": [
+        "d1a1",
+        "d1a4",
+        "d1b1",
+        "d1b3",
+        "d1c1",
+        "d1c2",
+        "d1d2",
+        "d1d3",
+        "d1d4",
+        "d1d5",
+        "d1d6",
+        "d1d7",
+        "d1d8",
+        "d1e1",
+        "d1e2",
+        "d1f1",
+        "d1f3",
+        "d1g4",
+        "d1h5",
+        "g1f1",
+        "g1f2",
+        "g1h1",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "d1a1",
+          "fen": "6k1/6pp/8/7p/8/8/6PP/Q5K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d1e1",
+          "fen": "6k1/6pp/8/7p/8/8/6PP/4Q1K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d1h5",
+          "fen": "6k1/6pp/8/7Q/8/8/6PP/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "6k1/6pp/8/7p/7P/8/6P1/3Q2K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-queen-and-knight-3",
+      "fen": "6k1/6pp/8/8/8/8/5PPP/6NK w - - 0 1",
+      "legalMoves": [
+        "f2f3",
+        "f2f4",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "f2f3",
+          "fen": "6k1/6pp/8/8/8/5P2/6PP/6NK b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1f3",
+          "fen": "6k1/6pp/8/8/8/5N2/5PPP/7K b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h3",
+          "fen": "6k1/6pp/8/8/8/7N/5PPP/7K b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "6k1/6pp/8/8/7P/8/5PP1/6NK b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-king-and-pawns-1",
+      "fen": "7k/p7/8/8/8/8/P2K4/8 w - - 0 1",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "d2c1",
+        "d2c2",
+        "d2c3",
+        "d2d1",
+        "d2d3",
+        "d2e1",
+        "d2e2",
+        "d2e3"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "7k/p7/8/8/8/P7/3K4/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d2d1",
+          "fen": "7k/p7/8/8/8/8/P7/3K4 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d2e3",
+          "fen": "7k/p7/8/8/8/4K3/P7/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-king-and-pawns-4",
+      "fen": "6k1/6pp/8/4p3/3P4/8/6PP/6K1 w - - 0 1",
+      "legalMoves": [
+        "d4d5",
+        "d4e5",
+        "g1f1",
+        "g1f2",
+        "g1h1",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "d4d5",
+          "fen": "6k1/6pp/8/3Pp3/8/8/6PP/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d4e5",
+          "fen": "6k1/6pp/8/4P3/8/8/6PP/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h1",
+          "fen": "6k1/6pp/8/4p3/3P4/8/6PP/7K b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "6k1/6pp/8/4p3/3P3P/8/6P1/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-answering-check-1",
+      "fen": "4r1k1/6pp/8/8/8/8/8/4KB2 w - - 0 1",
+      "legalMoves": [
+        "e1d1",
+        "e1d2",
+        "e1f2",
+        "f1e2"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1d1",
+          "fen": "4r1k1/6pp/8/8/8/8/8/3K1B2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1f2",
+          "fen": "4r1k1/6pp/8/8/8/8/5K2/5B2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f1e2",
+          "fen": "4r1k1/6pp/8/8/8/8/4B3/4K3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-answering-check-2",
+      "fen": "6k1/6pp/8/8/8/8/4r3/4K3 w - - 0 1",
+      "legalMoves": [
+        "e1d1",
+        "e1e2",
+        "e1f1"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1d1",
+          "fen": "6k1/6pp/8/8/8/8/4r3/3K4 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1e2",
+          "fen": "6k1/6pp/8/8/8/8/4K3/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1f1",
+          "fen": "6k1/6pp/8/8/8/8/4r3/5K2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-mate-or-draw-0",
+      "fen": "7k/6Q1/5K2/8/8/8/8/8 b - - 0 1",
+      "legalMoves": [],
+      "isCheck": true,
+      "isCheckmate": true,
+      "isStalemate": false,
+      "transitions": []
+    },
+    {
+      "id": "course-mate-or-draw-2",
+      "fen": "7k/5K2/6Q1/8/8/8/8/8 b - - 0 1",
+      "legalMoves": [],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": true,
+      "transitions": []
+    },
+    {
+      "id": "course-castle-safely-0",
+      "fen": "r3k2r/ppp2ppp/8/8/8/8/PPP2PPP/R3K2R w KQkq - 0 1",
+      "legalMoves": [
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "a2a3",
+        "a2a4",
+        "b2b3",
+        "b2b4",
+        "c2c3",
+        "c2c4",
+        "e1c1",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e1f1",
+        "e1g1",
+        "f2f3",
+        "f2f4",
+        "g2g3",
+        "g2g4",
+        "h1f1",
+        "h1g1",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1b1",
+          "fen": "r3k2r/ppp2ppp/8/8/8/8/PPP2PPP/1R2K2R b Kkq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1c1",
+          "fen": "r3k2r/ppp2ppp/8/8/8/8/PPP2PPP/2KR3R b kq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1d2",
+          "fen": "r3k2r/ppp2ppp/8/8/8/8/PPPK1PPP/R6R b kq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1g1",
+          "fen": "r3k2r/ppp2ppp/8/8/8/8/PPP2PPP/R4RK1 b kq - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "r3k2r/ppp2ppp/8/8/7P/8/PPP2PP1/R3K2R b KQkq - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-castle-safely-2",
+      "fen": "4kr2/8/8/8/8/8/8/4K2R w K - 0 1",
+      "legalMoves": [
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "h1f1",
+        "h1g1",
+        "h1h2",
+        "h1h3",
+        "h1h4",
+        "h1h5",
+        "h1h6",
+        "h1h7",
+        "h1h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1d1",
+          "fen": "4kr2/8/8/8/8/8/8/3K3R b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h1h3",
+          "fen": "4kr2/8/8/8/8/7R/8/4K3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h1h8",
+          "fen": "4kr1R/8/8/8/8/8/8/4K3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-pawn-surprises-1",
+      "fen": "6k1/6pp/8/3pP3/8/8/6PP/6K1 w - d6 0 2",
+      "legalMoves": [
+        "e5d6",
+        "e5e6",
+        "g1f1",
+        "g1f2",
+        "g1h1",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e5d6",
+          "fen": "6k1/6pp/3P4/8/8/8/6PP/6K1 b - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h1",
+          "fen": "6k1/6pp/8/3pP3/8/8/6PP/7K b - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "6k1/6pp/8/3pP3/7P/8/6P1/6K1 b - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-pawn-surprises-3",
+      "fen": "7k/P7/6K1/8/8/8/8/8 w - - 0 1",
+      "legalMoves": [
+        "a7a8b",
+        "a7a8n",
+        "a7a8q",
+        "a7a8r",
+        "g6f5",
+        "g6f6",
+        "g6f7",
+        "g6g5",
+        "g6h5",
+        "g6h6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a8b",
+          "fen": "B6k/8/6K1/8/8/8/8/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7a8n",
+          "fen": "N6k/8/6K1/8/8/8/8/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7a8q",
+          "fen": "Q6k/8/6K1/8/8/8/8/8 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": true,
+          "isStalemate": false
+        },
+        {
+          "uci": "a7a8r",
+          "fen": "R6k/8/6K1/8/8/8/8/8 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": true,
+          "isStalemate": false
+        },
+        {
+          "uci": "g6f6",
+          "fen": "7k/P7/5K2/8/8/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g6h6",
+          "fen": "7k/P7/7K/8/8/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-develop-your-team-1",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b2b3",
+        "b2b4",
+        "c2c3",
+        "c2c4",
+        "d1e2",
+        "d1f3",
+        "d1g4",
+        "d1h5",
+        "d2d3",
+        "d2d4",
+        "e1e2",
+        "f1a6",
+        "f1b5",
+        "f1c4",
+        "f1d3",
+        "f1e2",
+        "f2f3",
+        "f2f4",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/P7/1PPP1PPP/RNBQKBNR b KQkq - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1e2",
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPPKPPP/RNBQ1BNR b kq - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1f3",
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P2P/8/PPPP1PP1/RNBQKBNR b KQkq - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-develop-your-team-2",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b2b3",
+        "b2b4",
+        "c2c3",
+        "c2c4",
+        "d1e2",
+        "d2d3",
+        "d2d4",
+        "e1e2",
+        "f1a6",
+        "f1b5",
+        "f1c4",
+        "f1d3",
+        "f1e2",
+        "f3d4",
+        "f3e5",
+        "f3g1",
+        "f3g5",
+        "f3h4",
+        "g2g3",
+        "g2g4",
+        "h1g1",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/P4N2/1PPP1PPP/RNBQKB1R b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f1b5",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f1c4",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P2P/5N2/PPPP1PP1/RNBQKB1R b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-home-for-your-king-1",
+      "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b2b3",
+        "b2b4",
+        "c2c3",
+        "c4a6",
+        "c4b3",
+        "c4b5",
+        "c4d3",
+        "c4d5",
+        "c4e2",
+        "c4e6",
+        "c4f1",
+        "c4f7",
+        "d1e2",
+        "d2d3",
+        "d2d4",
+        "e1e2",
+        "e1f1",
+        "e1g1",
+        "f3d4",
+        "f3e5",
+        "f3g1",
+        "f3g5",
+        "f3h4",
+        "g2g3",
+        "g2g4",
+        "h1f1",
+        "h1g1",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/P4N2/1PPP1PPP/RNBQK2R b KQkq - 0 4",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d1e2",
+          "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPPQPPP/RNB1K2R b KQkq - 5 4",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1g1",
+          "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 5 4",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P2P/5N2/PPPP1PP1/RNBQK2R b KQkq - 0 4",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-notice-early-threats-0",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+      "legalMoves": [
+        "a7a5",
+        "a7a6",
+        "a8b8",
+        "b7b5",
+        "b7b6",
+        "c6a5",
+        "c6b4",
+        "c6b8",
+        "c6d4",
+        "c6e7",
+        "d7d5",
+        "d7d6",
+        "d8e7",
+        "d8f6",
+        "d8g5",
+        "d8h4",
+        "e8e7",
+        "f8a3",
+        "f8b4",
+        "f8c5",
+        "f8d6",
+        "f8e7",
+        "g7g5",
+        "g7g6",
+        "g8e7",
+        "g8f6",
+        "g8h6",
+        "h7h6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a5",
+          "fen": "r1bqkbnr/1ppp1ppp/2n5/p3p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 0 4",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d8g5",
+          "fen": "r1b1kbnr/pppp1ppp/2n5/4p1qQ/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h7h6",
+          "fen": "r1bqkbnr/pppp1pp1/2n4p/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 0 4",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-free-pieces-1",
+      "fen": "6k1/q5pp/8/8/8/8/6PP/R5K1 w - - 0 1",
+      "legalMoves": [
+        "a1a7",
+        "g1f1",
+        "g1h1"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a7",
+          "fen": "6k1/R5pp/8/8/8/8/6PP/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1f1",
+          "fen": "6k1/q5pp/8/8/8/8/6PP/R4K2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h1",
+          "fen": "6k1/q5pp/8/8/8/8/6PP/R6K b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-knight-forks-1",
+      "fen": "2q3k1/6pp/8/5N2/8/8/6PP/6K1 w - - 0 1",
+      "legalMoves": [
+        "f5d4",
+        "f5d6",
+        "f5e3",
+        "f5e7",
+        "f5g3",
+        "f5g7",
+        "f5h4",
+        "f5h6",
+        "g1f1",
+        "g1f2",
+        "g1h1",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "f5d4",
+          "fen": "2q3k1/6pp/8/8/3N4/8/6PP/6K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f5e7",
+          "fen": "2q3k1/4N1pp/8/8/8/8/6PP/6K1 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f5h6",
+          "fen": "2q3k1/6pp/7N/8/8/8/6PP/6K1 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "2q3k1/6pp/8/5N2/7P/8/6P1/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-the-pin-1",
+      "fen": "4k3/8/2n5/8/8/8/8/4KB2 w - - 0 1",
+      "legalMoves": [
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e1f2",
+        "f1a6",
+        "f1b5",
+        "f1c4",
+        "f1d3",
+        "f1e2",
+        "f1g2",
+        "f1h3"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1d1",
+          "fen": "4k3/8/2n5/8/8/8/8/3K1B2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f1b5",
+          "fen": "4k3/8/2n5/1B6/8/8/8/4K3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f1h3",
+          "fen": "4k3/8/2n5/8/8/7B/8/4K3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-the-skewer-1",
+      "fen": "4q3/3k4/8/8/8/8/4B3/6K1 w - - 0 1",
+      "legalMoves": [
+        "e2a6",
+        "e2b5",
+        "e2c4",
+        "e2d1",
+        "e2d3",
+        "e2f1",
+        "e2f3",
+        "e2g4",
+        "e2h5",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "g1h2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e2a6",
+          "fen": "4q3/3k4/B7/8/8/8/8/6K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e2b5",
+          "fen": "4q3/3k4/8/1B6/8/8/8/6K1 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e2g4",
+          "fen": "4q3/3k4/8/8/6B1/8/8/6K1 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h2",
+          "fen": "4q3/3k4/8/8/8/8/4B2K/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-back-rank-mate-1",
+      "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "a1e1",
+        "a1f1",
+        "f2f3",
+        "f2f4",
+        "g1f1",
+        "g1h1",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "6k1/5ppp/8/8/8/8/R4PPP/6K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1a8",
+          "fen": "R5k1/5ppp/8/8/8/8/5PPP/6K1 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": true,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1e1",
+          "fen": "6k1/5ppp/8/8/8/8/5PPP/4R1K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "6k1/5ppp/8/8/7P/8/5PP1/R5K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-protected-queen-mate-1",
+      "fen": "7k/8/5KQ1/8/8/8/8/8 w - - 0 1",
+      "legalMoves": [
+        "f6e5",
+        "f6e6",
+        "f6e7",
+        "f6f5",
+        "f6f7",
+        "f6g5",
+        "g6b1",
+        "g6c2",
+        "g6d3",
+        "g6e4",
+        "g6e8",
+        "g6f5",
+        "g6f7",
+        "g6g1",
+        "g6g2",
+        "g6g3",
+        "g6g4",
+        "g6g5",
+        "g6g7",
+        "g6g8",
+        "g6h5",
+        "g6h6",
+        "g6h7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "f6e5",
+          "fen": "7k/8/6Q1/4K3/8/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": true
+        },
+        {
+          "uci": "g6f5",
+          "fen": "7k/8/5K2/5Q2/8/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g6g7",
+          "fen": "7k/6Q1/5K2/8/8/8/8/8 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": true,
+          "isStalemate": false
+        },
+        {
+          "uci": "g6h7",
+          "fen": "7k/7Q/5K2/8/8/8/8/8 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-defend-with-purpose-1",
+      "fen": "4r1k1/8/8/8/8/8/q3R3/4K3 w - - 0 1",
+      "legalMoves": [
+        "e1d1",
+        "e1f1",
+        "e1f2",
+        "e2e3",
+        "e2e4",
+        "e2e5",
+        "e2e6",
+        "e2e7",
+        "e2e8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1d1",
+          "fen": "4r1k1/8/8/8/8/8/q3R3/3K4 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e2e4",
+          "fen": "4r1k1/8/8/8/4R3/8/q7/4K3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e2e8",
+          "fen": "4R1k1/8/8/8/8/8/q7/4K3 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-calculate-the-reply-1",
+      "fen": "4r1k1/8/8/8/8/8/8/3QR1K1 w - - 0 1",
+      "legalMoves": [
+        "d1a1",
+        "d1a4",
+        "d1b1",
+        "d1b3",
+        "d1c1",
+        "d1c2",
+        "d1d2",
+        "d1d3",
+        "d1d4",
+        "d1d5",
+        "d1d6",
+        "d1d7",
+        "d1d8",
+        "d1e2",
+        "d1f3",
+        "d1g4",
+        "d1h5",
+        "e1e2",
+        "e1e3",
+        "e1e4",
+        "e1e5",
+        "e1e6",
+        "e1e7",
+        "e1e8",
+        "e1f1",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "g1h2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "d1a1",
+          "fen": "4r1k1/8/8/8/8/8/8/Q3R1K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d1g4",
+          "fen": "4r1k1/8/8/8/6Q1/8/8/4R1K1 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1e8",
+          "fen": "4R1k1/8/8/8/8/8/8/3Q2K1 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h2",
+          "fen": "4r1k1/8/8/8/8/8/7K/3QR3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-piece-activity-1",
+      "fen": "6k1/5ppp/8/8/8/N7/5PPP/6K1 w - - 0 1",
+      "legalMoves": [
+        "a3b1",
+        "a3b5",
+        "a3c2",
+        "a3c4",
+        "f2f3",
+        "f2f4",
+        "g1f1",
+        "g1h1",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a3b1",
+          "fen": "6k1/5ppp/8/8/8/8/5PPP/1N4K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a3c4",
+          "fen": "6k1/5ppp/8/8/2N5/8/5PPP/6K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1f1",
+          "fen": "6k1/5ppp/8/8/8/N7/5PPP/5K2 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "6k1/5ppp/8/8/7P/N7/5PP1/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-pawn-structure-1",
+      "fen": "6k1/5ppp/8/8/2P5/2P5/P6P/6K1 w - - 0 1",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "c4c5",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "6k1/5ppp/8/8/2P5/P1P5/7P/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1f2",
+          "fen": "6k1/5ppp/8/8/2P5/2P5/P4K1P/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "6k1/5ppp/8/8/2P4P/2P5/P7/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-activate-your-king-1",
+      "fen": "4k3/p7/8/8/8/8/P7/4K3 w - - 0 1",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e1f1",
+        "e1f2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "4k3/p7/8/8/8/P7/8/4K3 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1d2",
+          "fen": "4k3/p7/8/8/8/8/P2K4/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1e2",
+          "fen": "4k3/p7/8/8/8/8/P3K3/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1f2",
+          "fen": "4k3/p7/8/8/8/8/P4K2/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-passed-pawns-1",
+      "fen": "8/7k/P7/5K2/8/8/8/8 w - - 0 1",
+      "legalMoves": [
+        "a6a7",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f4",
+        "f5f6",
+        "f5g4",
+        "f5g5"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a6a7",
+          "fen": "8/P6k/8/5K2/8/8/8/8 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f5f4",
+          "fen": "8/7k/P7/8/5K2/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f5g5",
+          "fen": "8/7k/P7/6K1/8/8/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-opposition-0",
+      "fen": "8/8/3k4/8/3KP3/8/8/8 w - - 0 1",
+      "legalMoves": [
+        "d4c3",
+        "d4c4",
+        "d4d3",
+        "d4e3",
+        "e4e5"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "d4c3",
+          "fen": "8/8/3k4/8/4P3/2K5/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d4d3",
+          "fen": "8/8/3k4/8/4P3/3K4/8/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e4e5",
+          "fen": "8/8/3k4/4P3/3K4/8/8/8 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-rook-mating-net-1",
+      "fen": "7k/8/6K1/8/8/8/8/R7 w - - 0 1",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "a1e1",
+        "a1f1",
+        "a1g1",
+        "a1h1",
+        "g6f5",
+        "g6f6",
+        "g6f7",
+        "g6g5",
+        "g6h5",
+        "g6h6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "7k/8/6K1/8/8/8/R7/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1a8",
+          "fen": "R6k/8/6K1/8/8/8/8/8 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": true,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1e1",
+          "fen": "7k/8/6K1/8/8/8/8/4R3 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g6h6",
+          "fen": "7k/8/7K/8/8/8/8/R7 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-opponents-last-move-1",
+      "fen": "6k1/6pp/8/4n3/8/3Q4/6PP/6K1 w - - 0 1",
+      "legalMoves": [
+        "d3a3",
+        "d3a6",
+        "d3b1",
+        "d3b3",
+        "d3b5",
+        "d3c2",
+        "d3c3",
+        "d3c4",
+        "d3d1",
+        "d3d2",
+        "d3d4",
+        "d3d5",
+        "d3d6",
+        "d3d7",
+        "d3d8",
+        "d3e2",
+        "d3e3",
+        "d3e4",
+        "d3f1",
+        "d3f3",
+        "d3f5",
+        "d3g3",
+        "d3g6",
+        "d3h3",
+        "d3h7",
+        "g1f1",
+        "g1f2",
+        "g1h1",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "d3a3",
+          "fen": "6k1/6pp/8/4n3/8/Q7/6PP/6K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d3e3",
+          "fen": "6k1/6pp/8/4n3/8/4Q3/6PP/6K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "6k1/6pp/8/4n3/7P/3Q4/6P1/6K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-the-final-safety-check-1",
+      "fen": "r5k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "a1e1",
+        "a1f1",
+        "f2f3",
+        "f2f4",
+        "g1f1",
+        "g1h1",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "r5k1/5ppp/8/8/8/8/R4PPP/6K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1e1",
+          "fen": "r5k1/5ppp/8/8/8/8/5PPP/4R1K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h3",
+          "fen": "r5k1/5ppp/8/8/8/7P/5PP1/R5K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "r5k1/5ppp/8/8/7P/8/5PP1/R5K1 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "course-ready-to-keep-learning-1",
+      "fen": "r3k3/8/8/1N6/8/8/8/6K1 w - - 0 1",
+      "legalMoves": [
+        "b5a3",
+        "b5a7",
+        "b5c3",
+        "b5c7",
+        "b5d4",
+        "b5d6",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "g1h2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "b5a3",
+          "fen": "r3k3/8/8/8/8/N7/8/6K1 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b5c7",
+          "fen": "r3k3/2N5/8/8/8/8/8/6K1 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b5d6",
+          "fen": "r3k3/8/3N4/8/8/8/8/6K1 b - - 1 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h2",
+          "fen": "r3k3/8/8/1N6/8/8/7K/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-castling-out-of-check",
+      "fen": "r3k2r/8/8/8/8/8/8/4R1K1 b kq - 0 1",
+      "legalMoves": [
+        "e8d7",
+        "e8d8",
+        "e8f7",
+        "e8f8"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e8d7",
+          "fen": "r6r/3k4/8/8/8/8/8/4R1K1 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8f7",
+          "fen": "r6r/5k2/8/8/8/8/8/4R1K1 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8f8",
+          "fen": "r4k1r/8/8/8/8/8/8/4R1K1 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-castling-rook-crosses-attacked-square",
+      "fen": "r3k3/1R6/8/8/8/8/8/4K3 b q - 0 1",
+      "legalMoves": [
+        "a8a1",
+        "a8a2",
+        "a8a3",
+        "a8a4",
+        "a8a5",
+        "a8a6",
+        "a8a7",
+        "a8b8",
+        "a8c8",
+        "a8d8",
+        "e8c8",
+        "e8d8",
+        "e8f8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a8a1",
+          "fen": "4k3/1R6/8/8/8/8/8/r3K3 w - - 1 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a8a7",
+          "fen": "4k3/rR6/8/8/8/8/8/4K3 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8c8",
+          "fen": "2kr4/1R6/8/8/8/8/8/4K3 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8f8",
+          "fen": "r4k2/1R6/8/8/8/8/8/4K3 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-castling-rights-absent",
+      "fen": "r3k2r/8/8/8/8/8/8/R3K2R b - - 0 1",
+      "legalMoves": [
+        "a8a1",
+        "a8a2",
+        "a8a3",
+        "a8a4",
+        "a8a5",
+        "a8a6",
+        "a8a7",
+        "a8b8",
+        "a8c8",
+        "a8d8",
+        "e8d7",
+        "e8d8",
+        "e8e7",
+        "e8f7",
+        "e8f8",
+        "h8f8",
+        "h8g8",
+        "h8h1",
+        "h8h2",
+        "h8h3",
+        "h8h4",
+        "h8h5",
+        "h8h6",
+        "h8h7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a8a1",
+          "fen": "4k2r/8/8/8/8/8/8/r3K2R w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8e7",
+          "fen": "r6r/4k3/8/8/8/8/8/R3K2R w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h8h7",
+          "fen": "r3k3/7r/8/8/8/8/8/R3K2R w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-en-passant-pinned",
+      "fen": "8/8/8/8/R4Ppk/8/8/7K b - f3 0 1",
+      "legalMoves": [
+        "g4g3",
+        "h4g3",
+        "h4h3",
+        "h4h5"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "g4g3",
+          "fen": "8/8/8/8/R4P1k/6p1/8/7K w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h4h3",
+          "fen": "8/8/8/8/R4Pp1/7k/8/7K w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h4h5",
+          "fen": "8/8/8/7k/R4Pp1/8/8/7K w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-en-passant-escapes-check",
+      "fen": "8/8/8/4k3/3Pp3/8/8/7K b - d3 0 2",
+      "legalMoves": [
+        "e4d3",
+        "e5d4",
+        "e5d5",
+        "e5d6",
+        "e5e6",
+        "e5f4",
+        "e5f5",
+        "e5f6"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e4d3",
+          "fen": "8/8/8/4k3/8/3p4/8/7K w - - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e5e6",
+          "fen": "8/8/4k3/8/3Pp3/8/8/7K w - - 1 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e5f6",
+          "fen": "8/8/5k2/8/3Pp3/8/8/7K w - - 1 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-en-passant-discovered-check",
+      "fen": "4r1k1/8/8/8/3Pp3/8/8/4K3 b - d3 0 2",
+      "legalMoves": [
+        "e4d3",
+        "e4e3",
+        "e8a8",
+        "e8b8",
+        "e8c8",
+        "e8d8",
+        "e8e5",
+        "e8e6",
+        "e8e7",
+        "e8f8",
+        "g8f7",
+        "g8f8",
+        "g8g7",
+        "g8h7",
+        "g8h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e4d3",
+          "fen": "4r1k1/8/8/8/8/3p4/8/4K3 w - - 0 3",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8e6",
+          "fen": "6k1/8/4r3/8/3Pp3/8/8/4K3 w - - 1 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g8h8",
+          "fen": "4r2k/8/8/8/3Pp3/8/8/4K3 w - - 1 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-promotion-white-captures",
+      "fen": "7k/8/8/8/8/8/p7/1R5K b - - 0 1",
+      "legalMoves": [
+        "a2a1b",
+        "a2a1n",
+        "a2a1q",
+        "a2a1r",
+        "a2b1b",
+        "a2b1n",
+        "a2b1q",
+        "a2b1r",
+        "h8g7",
+        "h8g8",
+        "h8h7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a1b",
+          "fen": "7k/8/8/8/8/8/8/bR5K w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a2a1n",
+          "fen": "7k/8/8/8/8/8/8/nR5K w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a2a1q",
+          "fen": "7k/8/8/8/8/8/8/qR5K w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a2a1r",
+          "fen": "7k/8/8/8/8/8/8/rR5K w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a2b1b",
+          "fen": "7k/8/8/8/8/8/8/1b5K w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a2b1n",
+          "fen": "7k/8/8/8/8/8/8/1n5K w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a2b1q",
+          "fen": "7k/8/8/8/8/8/8/1q5K w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a2b1r",
+          "fen": "7k/8/8/8/8/8/8/1r5K w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h8h7",
+          "fen": "8/7k/8/8/8/8/p7/1R5K w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-promotion-black-captures",
+      "fen": "k6r/6P1/8/8/8/8/8/K7 w - - 0 1",
+      "legalMoves": [
+        "a1a2",
+        "a1b1",
+        "a1b2",
+        "g7g8b",
+        "g7g8n",
+        "g7g8q",
+        "g7g8r",
+        "g7h8b",
+        "g7h8n",
+        "g7h8q",
+        "g7h8r"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "k6r/6P1/8/8/8/8/K7/8 b - - 1 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g7g8b",
+          "fen": "k5Br/8/8/8/8/8/8/K7 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g7g8n",
+          "fen": "k5Nr/8/8/8/8/8/8/K7 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g7g8q",
+          "fen": "k5Qr/8/8/8/8/8/8/K7 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g7g8r",
+          "fen": "k5Rr/8/8/8/8/8/8/K7 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g7h8b",
+          "fen": "k6B/8/8/8/8/8/8/K7 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g7h8n",
+          "fen": "k6N/8/8/8/8/8/8/K7 b - - 0 1",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g7h8q",
+          "fen": "k6Q/8/8/8/8/8/8/K7 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g7h8r",
+          "fen": "k6R/8/8/8/8/8/8/K7 b - - 0 1",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-pinned-knight-still-attacks",
+      "fen": "4r3/8/8/8/5k2/8/4N3/4K3 b - - 0 1",
+      "legalMoves": [
+        "e8e2",
+        "f4e3",
+        "f4e4",
+        "f4e5",
+        "f4f3",
+        "f4f5",
+        "f4g4",
+        "f4g5"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e8e2",
+          "fen": "8/8/8/8/5k2/8/4r3/4K3 w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f4f3",
+          "fen": "4r3/8/8/8/8/5k2/4N3/4K3 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f4g5",
+          "fen": "4r3/8/8/6k1/8/8/4N3/4K3 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-pinned-bishop-still-attacks",
+      "fen": "8/8/2b1k3/8/4B3/8/6K1/8 b - - 0 1",
+      "legalMoves": [
+        "c6a4",
+        "c6a8",
+        "c6b5",
+        "c6b7",
+        "c6d5",
+        "c6d7",
+        "c6e4",
+        "c6e8",
+        "e6d6",
+        "e6d7",
+        "e6e5",
+        "e6e7",
+        "e6f6",
+        "e6f7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "c6a4",
+          "fen": "8/8/4k3/8/b3B3/8/6K1/8 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c6e8",
+          "fen": "4b3/8/4k3/8/4B3/8/6K1/8 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e6f7",
+          "fen": "8/5k2/2b5/8/4B3/8/6K1/8 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-double-check",
+      "fen": "4kb2/8/8/1B6/8/8/8/4R1K1 b - - 0 1",
+      "legalMoves": [
+        "e8d8",
+        "e8f7"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e8d8",
+          "fen": "3k1b2/8/8/1B6/8/8/8/4R1K1 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8f7",
+          "fen": "5b2/5k2/8/1B6/8/8/8/4R1K1 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-dead-position-kings",
+      "fen": "k7/8/8/8/8/8/8/7K b - - 0 1",
+      "legalMoves": [
+        "a8a7",
+        "a8b7",
+        "a8b8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a8a7",
+          "fen": "8/k7/8/8/8/8/8/7K w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a8b7",
+          "fen": "8/1k6/8/8/8/8/8/7K w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a8b8",
+          "fen": "1k6/8/8/8/8/8/8/7K w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-underpromotion-avoids-stalemate",
+      "fen": "8/8/8/8/8/2k5/K1p5/8 b - - 0 1",
+      "legalMoves": [
+        "c2c1b",
+        "c2c1n",
+        "c2c1q",
+        "c2c1r",
+        "c3b4",
+        "c3c4",
+        "c3d2",
+        "c3d3",
+        "c3d4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "c2c1b",
+          "fen": "8/8/8/8/8/2k5/K7/2b5 w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c2c1n",
+          "fen": "8/8/8/8/8/2k5/K7/2n5 w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c2c1q",
+          "fen": "8/8/8/8/8/2k5/K7/2q5 w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": true
+        },
+        {
+          "uci": "c2c1r",
+          "fen": "8/8/8/8/8/2k5/K7/2r5 w - - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c3b4",
+          "fen": "8/8/8/8/1k6/8/K1p5/8 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c3d4",
+          "fen": "8/8/8/8/3k4/8/K1p5/8 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-high-move-counters",
+      "fen": "r5k1/8/8/8/8/8/8/6K1 b - - 149 90",
+      "legalMoves": [
+        "a8a1",
+        "a8a2",
+        "a8a3",
+        "a8a4",
+        "a8a5",
+        "a8a6",
+        "a8a7",
+        "a8b8",
+        "a8c8",
+        "a8d8",
+        "a8e8",
+        "a8f8",
+        "g8f7",
+        "g8f8",
+        "g8g7",
+        "g8h7",
+        "g8h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a8a1",
+          "fen": "6k1/8/8/8/8/8/8/r5K1 w - - 150 91",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a8c8",
+          "fen": "2r3k1/8/8/8/8/8/8/6K1 w - - 150 91",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g8h8",
+          "fen": "r6k/8/8/8/8/8/8/6K1 w - - 150 91",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-kiwipete",
+      "fen": "r3k2r/pppbbppp/2n2q1P/1P2p3/3pn3/BN2PNP1/P1PPQPB1/R3K2R b KQkq - 0 1",
+      "legalMoves": [
+        "a7a5",
+        "a7a6",
+        "a8b8",
+        "a8c8",
+        "a8d8",
+        "b7b6",
+        "c6a5",
+        "c6b4",
+        "c6b8",
+        "c6d8",
+        "d4d3",
+        "d4e3",
+        "d7c8",
+        "d7e6",
+        "d7f5",
+        "d7g4",
+        "d7h3",
+        "e4c3",
+        "e4c5",
+        "e4d2",
+        "e4d6",
+        "e4f2",
+        "e4g3",
+        "e4g5",
+        "e7a3",
+        "e7b4",
+        "e7c5",
+        "e7d6",
+        "e7d8",
+        "e7f8",
+        "e8c8",
+        "e8d8",
+        "e8f8",
+        "e8g8",
+        "f6d6",
+        "f6e6",
+        "f6f3",
+        "f6f4",
+        "f6f5",
+        "f6g5",
+        "f6g6",
+        "f6h4",
+        "f6h6",
+        "g7g5",
+        "g7g6",
+        "g7h6",
+        "h8f8",
+        "h8g8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a5",
+          "fen": "r3k2r/1ppbbppp/2n2q1P/pP2p3/3pn3/BN2PNP1/P1PPQPB1/R3K2R w KQkq a6 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e7a3",
+          "fen": "r3k2r/pppb1ppp/2n2q1P/1P2p3/3pn3/bN2PNP1/P1PPQPB1/R3K2R w KQkq - 0 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8c8",
+          "fen": "2kr3r/pppbbppp/2n2q1P/1P2p3/3pn3/BN2PNP1/P1PPQPB1/R3K2R w KQ - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8g8",
+          "fen": "r4rk1/pppbbppp/2n2q1P/1P2p3/3pn3/BN2PNP1/P1PPQPB1/R3K2R w KQ - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h8g8",
+          "fen": "r3k1r1/pppbbppp/2n2q1P/1P2p3/3pn3/BN2PNP1/P1PPQPB1/R3K2R w KQq - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "mirror-rook-pawn-endgame",
+      "fen": "8/4p1p1/8/1r3P1K/kp5R/3P4/2P5/8 b - - 0 1",
+      "legalMoves": [
+        "a4a3",
+        "a4a5",
+        "b5a5",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c5",
+        "b5d5",
+        "b5e5",
+        "b5f5",
+        "e7e5",
+        "e7e6",
+        "g7g5",
+        "g7g6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a4a3",
+          "fen": "8/4p1p1/8/1r3P1K/1p5R/k2P4/2P5/8 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b5d5",
+          "fen": "8/4p1p1/8/3r1P1K/kp5R/3P4/2P5/8 w - - 1 2",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g7g6",
+          "fen": "8/4p3/6p1/1r3P1K/kp5R/3P4/2P5/8 w - - 0 2",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-4",
+      "fen": "rnbqkbnr/pp1ppp1p/8/2p3p1/P7/4P3/1PPP1PPP/RNBQKBNR w KQkq - 0 3",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a4a5",
+        "b1a3",
+        "b1c3",
+        "b2b3",
+        "b2b4",
+        "c2c3",
+        "c2c4",
+        "d1e2",
+        "d1f3",
+        "d1g4",
+        "d1h5",
+        "d2d3",
+        "d2d4",
+        "e1e2",
+        "e3e4",
+        "f1a6",
+        "f1b5",
+        "f1c4",
+        "f1d3",
+        "f1e2",
+        "f2f3",
+        "f2f4",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "rnbqkbnr/pp1ppp1p/8/2p3p1/P7/4P3/RPPP1PPP/1NBQKBNR b Kkq - 1 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1e2",
+          "fen": "rnbqkbnr/pp1ppp1p/8/2p3p1/P7/4P3/1PPPKPPP/RNBQ1BNR b kq - 1 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rnbqkbnr/pp1ppp1p/8/2p3p1/P6P/4P3/1PPP1PP1/RNBQKBNR b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-8",
+      "fen": "rnbqkbnr/p2ppp1p/8/1pp3p1/P1P5/1P2P3/3P1PPP/RNBQKBNR w KQkq - 0 5",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a4a5",
+        "a4b5",
+        "b1a3",
+        "b1c3",
+        "b3b4",
+        "c1a3",
+        "c1b2",
+        "c4b5",
+        "d1c2",
+        "d1e2",
+        "d1f3",
+        "d1g4",
+        "d1h5",
+        "d2d3",
+        "d2d4",
+        "e1e2",
+        "e3e4",
+        "f1d3",
+        "f1e2",
+        "f2f3",
+        "f2f4",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "rnbqkbnr/p2ppp1p/8/1pp3p1/P1P5/1P2P3/R2P1PPP/1NBQKBNR b Kkq - 1 5",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d2d3",
+          "fen": "rnbqkbnr/p2ppp1p/8/1pp3p1/P1P5/1P1PP3/5PPP/RNBQKBNR b KQkq - 0 5",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rnbqkbnr/p2ppp1p/8/1pp3p1/P1P4P/1P2P3/3P1PP1/RNBQKBNR b KQkq - 0 5",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-11",
+      "fen": "rnbqkbnr/p2ppp1p/8/2p3p1/P1p5/1PN1P3/3PBPPP/R1BQK1NR b KQkq - 1 6",
+      "legalMoves": [
+        "a7a5",
+        "a7a6",
+        "b8a6",
+        "b8c6",
+        "c4b3",
+        "c8a6",
+        "c8b7",
+        "d7d5",
+        "d7d6",
+        "d8a5",
+        "d8b6",
+        "d8c7",
+        "e7e5",
+        "e7e6",
+        "f7f5",
+        "f7f6",
+        "f8g7",
+        "f8h6",
+        "g5g4",
+        "g8f6",
+        "g8h6",
+        "h7h5",
+        "h7h6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a5",
+          "fen": "rnbqkbnr/3ppp1p/8/p1p3p1/P1p5/1PN1P3/3PBPPP/R1BQK1NR w KQkq - 0 7",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d8c7",
+          "fen": "rnb1kbnr/p1qppp1p/8/2p3p1/P1p5/1PN1P3/3PBPPP/R1BQK1NR w KQkq - 2 7",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h7h6",
+          "fen": "rnbqkbnr/p2ppp2/7p/2p3p1/P1p5/1PN1P3/3PBPPP/R1BQK1NR w KQkq - 0 7",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-22",
+      "fen": "rnb1kbnr/3p3p/p4p2/q7/PpB3p1/4P3/3PKPPP/R1BQ2NR w kq - 2 12",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1b1",
+        "c1a3",
+        "c1b2",
+        "c4a2",
+        "c4a6",
+        "c4b3",
+        "c4b5",
+        "c4d3",
+        "c4d5",
+        "c4e6",
+        "c4f7",
+        "c4g8",
+        "d1b3",
+        "d1c2",
+        "d1e1",
+        "d1f1",
+        "d2d3",
+        "d2d4",
+        "e2d3",
+        "e2e1",
+        "e2f1",
+        "e3e4",
+        "f2f3",
+        "f2f4",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "rnb1kbnr/3p3p/p4p2/q7/PpB3p1/4P3/R2PKPPP/2BQ2NR b kq - 3 12",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d1c2",
+          "fen": "rnb1kbnr/3p3p/p4p2/q7/PpB3p1/4P3/2QPKPPP/R1B3NR b kq - 3 12",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rnb1kbnr/3p3p/p4p2/q7/PpB3pP/4P3/3PKPP1/R1BQ2NR b kq h3 0 12",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-33",
+      "fen": "rn2kb1r/1bqp1B1p/p4p1n/8/Pp6/4P1P1/3P1PPR/R1B1QKN1 b kq - 6 17",
+      "legalMoves": [
+        "e8d8",
+        "e8e7",
+        "e8f7",
+        "h6f7"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e8d8",
+          "fen": "rn1k1b1r/1bqp1B1p/p4p1n/8/Pp6/4P1P1/3P1PPR/R1B1QKN1 w - - 7 18",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8f7",
+          "fen": "rn3b1r/1bqp1k1p/p4p1n/8/Pp6/4P1P1/3P1PPR/R1B1QKN1 w - - 0 18",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h6f7",
+          "fen": "rn2kb1r/1bqp1n1p/p4p2/8/Pp6/4P1P1/3P1PPR/R1B1QKN1 w kq - 0 18",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-44",
+      "fen": "1n3b1r/rkqp3p/p4pbR/8/Pp1P4/5PP1/6P1/R1B1QKN1 w - - 0 23",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1b1",
+        "a4a5",
+        "c1a3",
+        "c1b2",
+        "c1d2",
+        "c1e3",
+        "c1f4",
+        "c1g5",
+        "d4d5",
+        "e1b4",
+        "e1c3",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e1e3",
+        "e1e4",
+        "e1e5",
+        "e1e6",
+        "e1e7",
+        "e1e8",
+        "e1f2",
+        "f1e2",
+        "f1f2",
+        "f3f4",
+        "g1e2",
+        "g1h3",
+        "g3g4",
+        "h6g6",
+        "h6h1",
+        "h6h2",
+        "h6h3",
+        "h6h4",
+        "h6h5",
+        "h6h7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "1n3b1r/rkqp3p/p4pbR/8/Pp1P4/5PP1/R5P1/2B1QKN1 b - - 1 23",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1e5",
+          "fen": "1n3b1r/rkqp3p/p4pbR/4Q3/Pp1P4/5PP1/6P1/R1B2KN1 b - - 1 23",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h6h7",
+          "fen": "1n3b1r/rkqp3R/p4pb1/8/Pp1P4/5PP1/6P1/R1B1QKN1 b - - 0 23",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-55",
+      "fen": "1Q3b1r/r4q1p/k2p2b1/p4p2/Pp1P3R/5PP1/6P1/1RB2KN1 b - - 0 28",
+      "legalMoves": [
+        "a7a8",
+        "a7b7",
+        "a7c7",
+        "a7d7",
+        "a7e7",
+        "b4b3",
+        "d6d5",
+        "f5f4",
+        "f7a2",
+        "f7b3",
+        "f7b7",
+        "f7c4",
+        "f7c7",
+        "f7d5",
+        "f7d7",
+        "f7e6",
+        "f7e7",
+        "f7e8",
+        "f7f6",
+        "f7g7",
+        "f7g8",
+        "f8e7",
+        "f8g7",
+        "f8h6",
+        "g6h5",
+        "h7h5",
+        "h7h6",
+        "h8g8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a8",
+          "fen": "rQ3b1r/5q1p/k2p2b1/p4p2/Pp1P3R/5PP1/6P1/1RB2KN1 w - - 1 29",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f7d7",
+          "fen": "1Q3b1r/r2q3p/k2p2b1/p4p2/Pp1P3R/5PP1/6P1/1RB2KN1 w - - 1 29",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h8g8",
+          "fen": "1Q3br1/r4q1p/k2p2b1/p4p2/Pp1P3R/5PP1/6P1/1RB2KN1 w - - 1 29",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-66",
+      "fen": "1Q3bqr/8/k5b1/p2p1p1p/Pp1P1R2/4KPP1/3R2P1/2r3N1 w - - 0 34",
+      "legalMoves": [
+        "b8a7",
+        "b8a8",
+        "b8b4",
+        "b8b5",
+        "b8b6",
+        "b8b7",
+        "b8c7",
+        "b8c8",
+        "b8d6",
+        "b8d8",
+        "b8e5",
+        "b8e8",
+        "b8f8",
+        "d2a2",
+        "d2b2",
+        "d2c2",
+        "d2d1",
+        "d2d3",
+        "d2e2",
+        "d2f2",
+        "e3d3",
+        "e3e2",
+        "e3f2",
+        "f4e4",
+        "f4f5",
+        "f4g4",
+        "f4h4",
+        "g1e2",
+        "g1h3",
+        "g3g4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "b8a7",
+          "fen": "5bqr/Q7/k5b1/p2p1p1p/Pp1P1R2/4KPP1/3R2P1/2r3N1 b - - 1 34",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d2c2",
+          "fen": "1Q3bqr/8/k5b1/p2p1p1p/Pp1P1R2/4KPP1/2R3P1/2r3N1 b - - 1 34",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g3g4",
+          "fen": "1Q3bqr/8/k5b1/p2p1p1p/Pp1P1RP1/4KP2/3R2P1/2r3N1 b - - 0 34",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-77",
+      "fen": "1Q5r/6rq/k5b1/p2p4/P2P2p1/3RK1P1/6P1/6N1 b - - 1 39",
+      "legalMoves": [
+        "g6d3",
+        "g6e4",
+        "g6e8",
+        "g6f5",
+        "g6f7",
+        "g6h5",
+        "g7a7",
+        "g7b7",
+        "g7c7",
+        "g7d7",
+        "g7e7",
+        "g7f7",
+        "g7g8",
+        "h7g8",
+        "h7h1",
+        "h7h2",
+        "h7h3",
+        "h7h4",
+        "h7h5",
+        "h7h6",
+        "h8b8",
+        "h8c8",
+        "h8d8",
+        "h8e8",
+        "h8f8",
+        "h8g8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "g6d3",
+          "fen": "1Q5r/6rq/k7/p2p4/P2P2p1/3bK1P1/6P1/6N1 w - - 0 40",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h7g8",
+          "fen": "1Q4qr/6r1/k5b1/p2p4/P2P2p1/3RK1P1/6P1/6N1 w - - 2 40",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h8g8",
+          "fen": "1Q4r1/6rq/k5b1/p2p4/P2P2p1/3RK1P1/6P1/6N1 w - - 2 40",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-88",
+      "fen": "7r/6r1/k6q/p2p1Q2/P2P2p1/3R2P1/5KP1/6N1 w - - 1 45",
+      "legalMoves": [
+        "d3a3",
+        "d3b3",
+        "d3c3",
+        "d3d1",
+        "d3d2",
+        "d3e3",
+        "d3f3",
+        "f2e1",
+        "f2e2",
+        "f2f1",
+        "f5c8",
+        "f5d5",
+        "f5d7",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f3",
+        "f5f4",
+        "f5f6",
+        "f5f7",
+        "f5f8",
+        "f5g4",
+        "f5g5",
+        "f5g6",
+        "f5h5",
+        "f5h7",
+        "g1e2",
+        "g1f3",
+        "g1h3"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "d3a3",
+          "fen": "7r/6r1/k6q/p2p1Q2/P2P2p1/R5P1/5KP1/6N1 b - - 2 45",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f5e5",
+          "fen": "7r/6r1/k6q/p2pQ3/P2P2p1/3R2P1/5KP1/6N1 b - - 2 45",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h3",
+          "fen": "7r/6r1/k6q/p2p1Q2/P2P2p1/3R2PN/5KP1/8 b - - 2 45",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-99",
+      "fen": "2r5/8/k3r3/p2p4/P2P2p1/1R4PN/4q1P1/6K1 b - - 5 50",
+      "legalMoves": [
+        "a6a7",
+        "c8a8",
+        "c8b8",
+        "c8c1",
+        "c8c2",
+        "c8c3",
+        "c8c4",
+        "c8c5",
+        "c8c6",
+        "c8c7",
+        "c8d8",
+        "c8e8",
+        "c8f8",
+        "c8g8",
+        "c8h8",
+        "e2a2",
+        "e2b2",
+        "e2b5",
+        "e2c2",
+        "e2c4",
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2e4",
+        "e2e5",
+        "e2f1",
+        "e2f2",
+        "e2f3",
+        "e2g2",
+        "e6b6",
+        "e6c6",
+        "e6d6",
+        "e6e3",
+        "e6e4",
+        "e6e5",
+        "e6e7",
+        "e6e8",
+        "e6f6",
+        "e6g6",
+        "e6h6",
+        "g4h3"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a6a7",
+          "fen": "2r5/k7/4r3/p2p4/P2P2p1/1R4PN/4q1P1/6K1 w - - 6 51",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e2d2",
+          "fen": "2r5/8/k3r3/p2p4/P2P2p1/1R4PN/3q2P1/6K1 w - - 6 51",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g4h3",
+          "fen": "2r5/8/k3r3/p2p4/P2P4/1R4Pp/4q1P1/6K1 w - - 0 51",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-110",
+      "fen": "8/2k5/8/pP1pP3/6p1/6PN/6PK/2r5 w - - 1 56",
+      "legalMoves": [
+        "b5b6",
+        "e5e6",
+        "h3f2",
+        "h3f4",
+        "h3g1",
+        "h3g5"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "b5b6",
+          "fen": "8/2k5/1P6/p2pP3/6p1/6PN/6PK/2r5 b - - 0 56",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h3f4",
+          "fen": "8/2k5/8/pP1pP3/5Np1/6P1/6PK/2r5 b - - 2 56",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h3g5",
+          "fen": "8/2k5/8/pP1pP1N1/6p1/6P1/6PK/2r5 b - - 2 56",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-121",
+      "fen": "1B6/3k1r2/8/p2pP3/6p1/6P1/6P1/7K b - - 2 61",
+      "legalMoves": [
+        "a5a4",
+        "d5d4",
+        "d7c6",
+        "d7c8",
+        "d7d8",
+        "d7e6",
+        "d7e7",
+        "d7e8",
+        "f7e7",
+        "f7f1",
+        "f7f2",
+        "f7f3",
+        "f7f4",
+        "f7f5",
+        "f7f6",
+        "f7f8",
+        "f7g7",
+        "f7h7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a5a4",
+          "fen": "1B6/3k1r2/8/3pP3/p5p1/6P1/6P1/7K w - - 0 62",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f7f1",
+          "fen": "1B6/3k4/8/p2pP3/6p1/6P1/6P1/5r1K w - - 3 62",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f7h7",
+          "fen": "1B6/3k3r/8/p2pP3/6p1/6P1/6P1/7K w - - 3 62",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-132",
+      "fen": "2k3r1/8/4P3/3p4/p5p1/4B1P1/6P1/7K w - - 0 67",
+      "legalMoves": [
+        "e3a7",
+        "e3b6",
+        "e3c1",
+        "e3c5",
+        "e3d2",
+        "e3d4",
+        "e3f2",
+        "e3f4",
+        "e3g1",
+        "e3g5",
+        "e3h6",
+        "e6e7",
+        "h1g1",
+        "h1h2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e3a7",
+          "fen": "2k3r1/B7/4P3/3p4/p5p1/6P1/6P1/7K b - - 1 67",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e3f4",
+          "fen": "2k3r1/8/4P3/3p4/p4Bp1/6P1/6P1/7K b - - 1 67",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h1h2",
+          "fen": "2k3r1/8/4P3/3p4/p5p1/4B1P1/6PK/8 b - - 1 67",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-143",
+      "fen": "3k4/1r6/4P3/3p4/p5p1/6P1/6PK/8 b - - 5 72",
+      "legalMoves": [
+        "a4a3",
+        "b7a7",
+        "b7b1",
+        "b7b2",
+        "b7b3",
+        "b7b4",
+        "b7b5",
+        "b7b6",
+        "b7b8",
+        "b7c7",
+        "b7d7",
+        "b7e7",
+        "b7f7",
+        "b7g7",
+        "b7h7",
+        "d5d4",
+        "d8c7",
+        "d8c8",
+        "d8e7",
+        "d8e8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a4a3",
+          "fen": "3k4/1r6/4P3/3p4/6p1/p5P1/6PK/8 w - - 0 73",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b7d7",
+          "fen": "3k4/3r4/4P3/3p4/p5p1/6P1/6PK/8 w - - 6 73",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d8e8",
+          "fen": "4k3/1r6/4P3/3p4/p5p1/6P1/6PK/8 w - - 6 73",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-154",
+      "fen": "4k3/8/8/3p4/p5p1/6P1/6P1/5K2 w - - 2 78",
+      "legalMoves": [
+        "f1e1",
+        "f1e2",
+        "f1f2",
+        "f1g1"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "f1e1",
+          "fen": "4k3/8/8/3p4/p5p1/6P1/6P1/4K3 b - - 3 78",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f1f2",
+          "fen": "4k3/8/8/3p4/p5p1/6P1/5KP1/8 b - - 3 78",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f1g1",
+          "fen": "4k3/8/8/3p4/p5p1/6P1/6P1/6K1 b - - 3 78",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-165",
+      "fen": "4k3/8/8/8/3p2p1/p5P1/6PK/8 b - - 3 83",
+      "legalMoves": [
+        "a3a2",
+        "d4d3",
+        "e8d7",
+        "e8d8",
+        "e8e7",
+        "e8f7",
+        "e8f8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a3a2",
+          "fen": "4k3/8/8/8/3p2p1/6P1/p5PK/8 w - - 0 84",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8d8",
+          "fen": "3k4/8/8/8/3p2p1/p5P1/6PK/8 w - - 4 84",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e8f8",
+          "fen": "5k2/8/8/8/3p2p1/p5P1/6PK/8 w - - 4 84",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-0-ply-176",
+      "fen": "8/8/8/4k3/3p2p1/6P1/p5P1/6K1 w - - 0 89",
+      "legalMoves": [
+        "g1f1",
+        "g1f2",
+        "g1h1",
+        "g1h2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "g1f1",
+          "fen": "8/8/8/4k3/3p2p1/6P1/p5P1/5K2 b - - 1 89",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h1",
+          "fen": "8/8/8/4k3/3p2p1/6P1/p5P1/7K b - - 1 89",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g1h2",
+          "fen": "8/8/8/4k3/3p2p1/6P1/p5PK/8 b - - 1 89",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-4",
+      "fen": "rnbqkb1r/ppp1pppp/7n/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b1d2",
+        "b2b3",
+        "b2b4",
+        "c1d2",
+        "c1e3",
+        "c1f4",
+        "c1g5",
+        "c1h6",
+        "c2c3",
+        "c2c4",
+        "d1d2",
+        "d1d3",
+        "d1e2",
+        "d1f3",
+        "d1g4",
+        "d1h5",
+        "e1d2",
+        "e1e2",
+        "e4d5",
+        "e4e5",
+        "f1a6",
+        "f1b5",
+        "f1c4",
+        "f1d3",
+        "f1e2",
+        "f2f3",
+        "f2f4",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "rnbqkb1r/ppp1pppp/7n/3p4/3PP3/P7/1PP2PPP/RNBQKBNR b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d1h5",
+          "fen": "rnbqkb1r/ppp1pppp/7n/3p3Q/3PP3/8/PPP2PPP/RNB1KBNR b KQkq - 1 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rnbqkb1r/ppp1pppp/7n/3p4/3PP2P/8/PPP2PP1/RNBQKBNR b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-8",
+      "fen": "rnb1kb1r/ppp2ppp/3q3n/3pp1B1/3PP3/3Q4/PPP2PPP/RN2KBNR w KQkq - 0 5",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b1d2",
+        "b2b3",
+        "b2b4",
+        "c2c3",
+        "c2c4",
+        "d3a3",
+        "d3a6",
+        "d3b3",
+        "d3b5",
+        "d3c3",
+        "d3c4",
+        "d3d1",
+        "d3d2",
+        "d3e2",
+        "d3e3",
+        "d3f3",
+        "d3g3",
+        "d3h3",
+        "d4e5",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e4d5",
+        "f1e2",
+        "f2f3",
+        "f2f4",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "g2g4",
+        "g5c1",
+        "g5d2",
+        "g5d8",
+        "g5e3",
+        "g5e7",
+        "g5f4",
+        "g5f6",
+        "g5h4",
+        "g5h6",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "rnb1kb1r/ppp2ppp/3q3n/3pp1B1/3PP3/P2Q4/1PP2PPP/RN2KBNR b KQkq - 0 5",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e1d1",
+          "fen": "rnb1kb1r/ppp2ppp/3q3n/3pp1B1/3PP3/3Q4/PPP2PPP/RN1K1BNR b kq - 1 5",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rnb1kb1r/ppp2ppp/3q3n/3pp1B1/3PP2P/3Q4/PPP2PP1/RN2KBNR b KQkq - 0 5",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-11",
+      "fen": "rnb1kb1r/pppq1ppp/6Qn/3Pp1B1/3P4/8/PPP2PPP/RN2KBNR b KQkq - 2 6",
+      "legalMoves": [
+        "a7a5",
+        "a7a6",
+        "b7b5",
+        "b7b6",
+        "b8a6",
+        "b8c6",
+        "c7c5",
+        "c7c6",
+        "d7a4",
+        "d7b5",
+        "d7c6",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e6",
+        "d7e7",
+        "d7f5",
+        "d7g4",
+        "d7h3",
+        "e5d4",
+        "e5e4",
+        "f7g6",
+        "f8a3",
+        "f8b4",
+        "f8c5",
+        "f8d6",
+        "f8e7",
+        "h6f5",
+        "h6g4",
+        "h6g8",
+        "h7g6",
+        "h8g8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a5",
+          "fen": "rnb1kb1r/1ppq1ppp/6Qn/p2Pp1B1/3P4/8/PPP2PPP/RN2KBNR w KQkq - 0 7",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d7f5",
+          "fen": "rnb1kb1r/ppp2ppp/6Qn/3PpqB1/3P4/8/PPP2PPP/RN2KBNR w KQkq - 3 7",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h8g8",
+          "fen": "rnb1kbr1/pppq1ppp/6Qn/3Pp1B1/3P4/8/PPP2PPP/RN2KBNR w KQq - 3 7",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-22",
+      "fen": "rn3b1r/p4k1p/b1Pq4/1p2P3/6n1/4B3/PPP2PPP/RN2KBNR w KQ - 1 12",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b1d2",
+        "b2b3",
+        "b2b4",
+        "c2c3",
+        "c2c4",
+        "c6c7",
+        "e1e2",
+        "e3a7",
+        "e3b6",
+        "e3c1",
+        "e3c5",
+        "e3d2",
+        "e3d4",
+        "e3f4",
+        "e3g5",
+        "e3h6",
+        "e5d6",
+        "e5e6",
+        "f1b5",
+        "f1c4",
+        "f1d3",
+        "f1e2",
+        "f2f3",
+        "f2f4",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "rn3b1r/p4k1p/b1Pq4/1p2P3/6n1/P3B3/1PP2PPP/RN2KBNR b KQ - 0 12",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e3f4",
+          "fen": "rn3b1r/p4k1p/b1Pq4/1p2P3/5Bn1/8/PPP2PPP/RN2KBNR b KQ - 2 12",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rn3b1r/p4k1p/b1Pq4/1p2P3/6nP/4B3/PPP2PP1/RN2KBNR b KQ - 0 12",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-33",
+      "fen": "rn5r/pb3k1p/2P5/1p2P3/P7/R2B4/1PP3PP/1NK3NR b - - 0 17",
+      "legalMoves": [
+        "a7a5",
+        "a7a6",
+        "b5a4",
+        "b5b4",
+        "b7a6",
+        "b7c6",
+        "b7c8",
+        "b8a6",
+        "b8c6",
+        "b8d7",
+        "f7e6",
+        "f7e7",
+        "f7e8",
+        "f7f8",
+        "f7g7",
+        "f7g8",
+        "h7h5",
+        "h7h6",
+        "h8c8",
+        "h8d8",
+        "h8e8",
+        "h8f8",
+        "h8g8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a5",
+          "fen": "rn5r/1b3k1p/2P5/pp2P3/P7/R2B4/1PP3PP/1NK3NR w - - 0 18",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f7e7",
+          "fen": "rn5r/pb2k2p/2P5/1p2P3/P7/R2B4/1PP3PP/1NK3NR w - - 1 18",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h8g8",
+          "fen": "rn4r1/pb3k1p/2P5/1p2P3/P7/R2B4/1PP3PP/1NK3NR w - - 1 18",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-44",
+      "fen": "rr6/p7/2b1k3/1p2n2p/P3B3/2N5/1PP3PP/RK4NR w - - 0 23",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a4a5",
+        "a4b5",
+        "b1a2",
+        "b1c1",
+        "b2b3",
+        "b2b4",
+        "c3a2",
+        "c3b5",
+        "c3d1",
+        "c3d5",
+        "c3e2",
+        "e4c6",
+        "e4d3",
+        "e4d5",
+        "e4f3",
+        "e4f5",
+        "e4g6",
+        "e4h7",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "g2g3",
+        "g2g4",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "rr6/p7/2b1k3/1p2n2p/P3B3/2N5/RPP3PP/1K4NR b - - 1 23",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e4c6",
+          "fen": "rr6/p7/2B1k3/1p2n2p/P7/2N5/1PP3PP/RK4NR b - - 0 23",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rr6/p7/2b1k3/1p2n2p/P3B2P/2N5/1PP3P1/RK4NR b - - 0 23",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-55",
+      "fen": "1r6/r7/2b5/Pp3k1p/P7/8/2P1N1PP/R2K2nR b - - 0 28",
+      "legalMoves": [
+        "a7a5",
+        "a7a6",
+        "a7a8",
+        "a7b7",
+        "a7c7",
+        "a7d7",
+        "a7e7",
+        "a7f7",
+        "a7g7",
+        "a7h7",
+        "b5a4",
+        "b5b4",
+        "b8a8",
+        "b8b6",
+        "b8b7",
+        "b8c8",
+        "b8d8",
+        "b8e8",
+        "b8f8",
+        "b8g8",
+        "b8h8",
+        "c6a8",
+        "c6b7",
+        "c6d5",
+        "c6d7",
+        "c6e4",
+        "c6e8",
+        "c6f3",
+        "c6g2",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f6",
+        "f5g4",
+        "f5g5",
+        "f5g6",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "h5h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a5",
+          "fen": "1r6/8/2b5/rp3k1p/P7/8/2P1N1PP/R2K2nR w - - 0 29",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b8h8",
+          "fen": "7r/r7/2b5/Pp3k1p/P7/8/2P1N1PP/R2K2nR w - - 1 29",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h5h4",
+          "fen": "1r6/r7/2b5/Pp3k2/P6p/8/2P1N1PP/R2K2nR w - - 0 29",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-66",
+      "fen": "1r6/2r5/2b5/Pp5p/P6k/8/2P4P/R1K3NR w - - 2 34",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1b1",
+        "a4b5",
+        "a5a6",
+        "c1b1",
+        "c1b2",
+        "c1d1",
+        "c1d2",
+        "c2c3",
+        "c2c4",
+        "g1e2",
+        "g1f3",
+        "g1h3",
+        "h2h3"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "1r6/2r5/2b5/Pp5p/P6k/8/R1P4P/2K3NR b - - 3 34",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c1d1",
+          "fen": "1r6/2r5/2b5/Pp5p/P6k/8/2P4P/R2K2NR b - - 3 34",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h3",
+          "fen": "1r6/2r5/2b5/Pp5p/P6k/7P/2P5/R1K3NR b - - 0 34",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-77",
+      "fen": "8/8/8/P2r3p/7k/R7/1K2b2P/7R b - - 3 39",
+      "legalMoves": [
+        "d5a5",
+        "d5b5",
+        "d5c5",
+        "d5d1",
+        "d5d2",
+        "d5d3",
+        "d5d4",
+        "d5d6",
+        "d5d7",
+        "d5d8",
+        "d5e5",
+        "d5f5",
+        "d5g5",
+        "e2a6",
+        "e2b5",
+        "e2c4",
+        "e2d1",
+        "e2d3",
+        "e2f1",
+        "e2f3",
+        "e2g4",
+        "h4g4",
+        "h4g5"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "d5a5",
+          "fen": "8/8/8/r6p/7k/R7/1K2b2P/7R w - - 0 40",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d5f5",
+          "fen": "8/8/8/P4r1p/7k/R7/1K2b2P/7R w - - 4 40",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h4g5",
+          "fen": "8/8/8/P2r2kp/8/R7/1K2b2P/7R w - - 4 40",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-88",
+      "fen": "8/8/8/P5k1/7p/K6b/3R3P/R7 w - - 0 45",
+      "legalMoves": [
+        "a1a2",
+        "a1b1",
+        "a1c1",
+        "a1d1",
+        "a1e1",
+        "a1f1",
+        "a1g1",
+        "a1h1",
+        "a3a2",
+        "a3a4",
+        "a3b2",
+        "a3b3",
+        "a3b4",
+        "a5a6",
+        "d2a2",
+        "d2b2",
+        "d2c2",
+        "d2d1",
+        "d2d3",
+        "d2d4",
+        "d2d5",
+        "d2d6",
+        "d2d7",
+        "d2d8",
+        "d2e2",
+        "d2f2",
+        "d2g2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "8/8/8/P5k1/7p/K6b/R2R3P/8 b - - 1 45",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a5a6",
+          "fen": "8/8/P7/6k1/7p/K6b/3R3P/R7 b - - 0 45",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d2g2",
+          "fen": "8/8/8/P5k1/7p/K6b/6RP/R7 b - - 1 45",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-99",
+      "fen": "8/8/4b3/P4k2/8/7p/1K5P/R7 b - - 1 50",
+      "legalMoves": [
+        "e6a2",
+        "e6b3",
+        "e6c4",
+        "e6c8",
+        "e6d5",
+        "e6d7",
+        "e6f7",
+        "e6g8",
+        "f5e4",
+        "f5e5",
+        "f5f4",
+        "f5f6",
+        "f5g4",
+        "f5g5",
+        "f5g6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e6a2",
+          "fen": "8/8/8/P4k2/8/7p/bK5P/R7 w - - 2 51",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e6g8",
+          "fen": "6b1/8/8/P4k2/8/7p/1K5P/R7 w - - 2 51",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f5g6",
+          "fen": "8/8/4b1k1/P7/8/7p/1K5P/R7 w - - 2 51",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-110",
+      "fen": "8/3k4/b7/8/8/7p/7P/RK6 w - - 2 56",
+      "legalMoves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "b1a2",
+        "b1b2",
+        "b1c1",
+        "b1c2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1a2",
+          "fen": "8/3k4/b7/8/8/7p/R6P/1K6 b - - 3 56",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "a1a6",
+          "fen": "8/3k4/R7/8/8/7p/7P/1K6 b - - 0 56",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b1c2",
+          "fen": "8/3k4/b7/8/8/7p/2K4P/R7 b - - 3 56",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-121",
+      "fen": "8/8/8/3k4/R7/7p/7P/K7 b - - 8 61",
+      "legalMoves": [
+        "d5c5",
+        "d5c6",
+        "d5d6",
+        "d5e5",
+        "d5e6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "d5c5",
+          "fen": "8/8/8/2k5/R7/7p/7P/K7 w - - 9 62",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d5d6",
+          "fen": "8/8/3k4/8/R7/7p/7P/K7 w - - 9 62",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d5e6",
+          "fen": "8/8/4k3/8/R7/7p/7P/K7 w - - 9 62",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-132",
+      "fen": "8/k7/8/8/8/7p/1K3R1P/8 w - - 19 67",
+      "legalMoves": [
+        "b2a1",
+        "b2a2",
+        "b2a3",
+        "b2b1",
+        "b2b3",
+        "b2c1",
+        "b2c2",
+        "b2c3",
+        "f2c2",
+        "f2d2",
+        "f2e2",
+        "f2f1",
+        "f2f3",
+        "f2f4",
+        "f2f5",
+        "f2f6",
+        "f2f7",
+        "f2f8",
+        "f2g2"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "b2a1",
+          "fen": "8/k7/8/8/8/7p/5R1P/K7 b - - 20 67",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f2d2",
+          "fen": "8/k7/8/8/8/7p/1K1R3P/8 b - - 20 67",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f2g2",
+          "fen": "8/k7/8/8/8/7p/1K4RP/8 b - - 20 67",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-143",
+      "fen": "8/2k5/8/8/8/5R1p/7P/K7 b - - 30 72",
+      "legalMoves": [
+        "c7b6",
+        "c7b7",
+        "c7b8",
+        "c7c6",
+        "c7c8",
+        "c7d6",
+        "c7d7",
+        "c7d8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "c7b6",
+          "fen": "8/8/1k6/8/8/5R1p/7P/K7 w - - 31 73",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c7c8",
+          "fen": "2k5/8/8/8/8/5R1p/7P/K7 w - - 31 73",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c7d8",
+          "fen": "3k4/8/8/8/8/5R1p/7P/K7 w - - 31 73",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-154",
+      "fen": "k7/8/8/8/8/7R/2K4P/8 w - - 1 78",
+      "legalMoves": [
+        "c2b1",
+        "c2b2",
+        "c2b3",
+        "c2c1",
+        "c2c3",
+        "c2d1",
+        "c2d2",
+        "c2d3",
+        "h3a3",
+        "h3b3",
+        "h3c3",
+        "h3d3",
+        "h3e3",
+        "h3f3",
+        "h3g3",
+        "h3h4",
+        "h3h5",
+        "h3h6",
+        "h3h7",
+        "h3h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "c2b1",
+          "fen": "k7/8/8/8/8/7R/7P/1K6 b - - 2 78",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h3c3",
+          "fen": "k7/8/8/8/8/2R5/2K4P/8 b - - 2 78",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h3h8",
+          "fen": "k6R/8/8/8/8/8/2K4P/8 b - - 2 78",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-165",
+      "fen": "1k5R/8/8/8/6K1/8/7P/8 b - - 12 83",
+      "legalMoves": [
+        "b8a7",
+        "b8b7",
+        "b8c7"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "b8a7",
+          "fen": "7R/k7/8/8/6K1/8/7P/8 w - - 13 84",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b8b7",
+          "fen": "7R/1k6/8/8/6K1/8/7P/8 w - - 13 84",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b8c7",
+          "fen": "7R/2k5/8/8/6K1/8/7P/8 w - - 13 84",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-1-ply-176",
+      "fen": "8/8/k4K2/8/7R/8/7P/8 w - - 23 89",
+      "legalMoves": [
+        "f6e5",
+        "f6e6",
+        "f6e7",
+        "f6f5",
+        "f6f7",
+        "f6g5",
+        "f6g6",
+        "f6g7",
+        "h2h3",
+        "h4a4",
+        "h4b4",
+        "h4c4",
+        "h4d4",
+        "h4e4",
+        "h4f4",
+        "h4g4",
+        "h4h3",
+        "h4h5",
+        "h4h6",
+        "h4h7",
+        "h4h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "f6e5",
+          "fen": "8/8/k7/4K3/7R/8/7P/8 b - - 24 89",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h4b4",
+          "fen": "8/8/k4K2/8/1R6/8/7P/8 b - - 24 89",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h4h8",
+          "fen": "7R/8/k4K2/8/8/8/7P/8 b - - 24 89",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-4",
+      "fen": "rnbqkbnr/ppppp1pp/8/5p2/2P5/5N2/PP1PPPPP/RNBQKB1R w KQkq - 0 3",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b2b3",
+        "b2b4",
+        "c4c5",
+        "d1a4",
+        "d1b3",
+        "d1c2",
+        "d2d3",
+        "d2d4",
+        "e2e3",
+        "e2e4",
+        "f3d4",
+        "f3e5",
+        "f3g1",
+        "f3g5",
+        "f3h4",
+        "g2g3",
+        "g2g4",
+        "h1g1",
+        "h2h3",
+        "h2h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "rnbqkbnr/ppppp1pp/8/5p2/2P5/P4N2/1P1PPPPP/RNBQKB1R b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e2e3",
+          "fen": "rnbqkbnr/ppppp1pp/8/5p2/2P5/4PN2/PP1P1PPP/RNBQKB1R b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h2h4",
+          "fen": "rnbqkbnr/ppppp1pp/8/5p2/2P4P/5N2/PP1PPPP1/RNBQKB1R b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-8",
+      "fen": "rnbqkbnr/p1ppp1pp/8/1p6/2P2p1P/5N1R/PP1PPPP1/RNBQKB2 w Qkq - 0 5",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b2b3",
+        "b2b4",
+        "c4b5",
+        "c4c5",
+        "d1a4",
+        "d1b3",
+        "d1c2",
+        "d2d3",
+        "d2d4",
+        "e2e3",
+        "e2e4",
+        "f3d4",
+        "f3e5",
+        "f3g1",
+        "f3g5",
+        "f3h2",
+        "g2g3",
+        "g2g4",
+        "h3g3",
+        "h3h1",
+        "h3h2",
+        "h4h5"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "rnbqkbnr/p1ppp1pp/8/1p6/2P2p1P/P4N1R/1P1PPPP1/RNBQKB2 b Qkq - 0 5",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e2e3",
+          "fen": "rnbqkbnr/p1ppp1pp/8/1p6/2P2p1P/4PN1R/PP1P1PP1/RNBQKB2 b Qkq - 0 5",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h4h5",
+          "fen": "rnbqkbnr/p1ppp1pp/8/1p5P/2P2p2/5N1R/PP1PPPP1/RNBQKB2 b Qkq - 0 5",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-11",
+      "fen": "rnbqkbnr/p1p1p1pp/3p4/1p6/2P2p1P/4PN1R/PP1PQPP1/RNB1KB2 b Qkq - 1 6",
+      "legalMoves": [
+        "a7a5",
+        "a7a6",
+        "b5b4",
+        "b5c4",
+        "b8a6",
+        "b8c6",
+        "b8d7",
+        "c7c5",
+        "c7c6",
+        "c8a6",
+        "c8b7",
+        "c8d7",
+        "c8e6",
+        "c8f5",
+        "c8g4",
+        "c8h3",
+        "d6d5",
+        "d8d7",
+        "e7e5",
+        "e7e6",
+        "e8d7",
+        "e8f7",
+        "f4e3",
+        "g7g5",
+        "g7g6",
+        "g8f6",
+        "g8h6",
+        "h7h5",
+        "h7h6"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a7a5",
+          "fen": "rnbqkbnr/2p1p1pp/3p4/pp6/2P2p1P/4PN1R/PP1PQPP1/RNB1KB2 w Qkq - 0 7",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c8g4",
+          "fen": "rn1qkbnr/p1p1p1pp/3p4/1p6/2P2pbP/4PN1R/PP1PQPP1/RNB1KB2 w Qkq - 2 7",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h7h6",
+          "fen": "rnbqkbnr/p1p1p1p1/3p3p/1p6/2P2p1P/4PN1R/PP1PQPP1/RNB1KB2 w Qkq - 0 7",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-22",
+      "fen": "rnq1kbnr/2p1p3/3p2pp/pP6/3P1PbP/4QN1R/PP3P2/RNB1KB2 w Qkq - 0 12",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b1d2",
+        "b2b3",
+        "b2b4",
+        "b5b6",
+        "c1d2",
+        "d4d5",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e3a3",
+        "e3b3",
+        "e3c3",
+        "e3d2",
+        "e3d3",
+        "e3e2",
+        "e3e4",
+        "e3e5",
+        "e3e6",
+        "e3e7",
+        "f1c4",
+        "f1d3",
+        "f1e2",
+        "f1g2",
+        "f3d2",
+        "f3e5",
+        "f3g1",
+        "f3g5",
+        "f3h2",
+        "f4f5",
+        "h3g3",
+        "h3h1",
+        "h3h2",
+        "h4h5"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "rnq1kbnr/2p1p3/3p2pp/pP6/3P1PbP/P3QN1R/1P3P2/RNB1KB2 b Qkq - 0 12",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e3e2",
+          "fen": "rnq1kbnr/2p1p3/3p2pp/pP6/3P1PbP/5N1R/PP2QP2/RNB1KB2 b Qkq - 1 12",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h4h5",
+          "fen": "rnq1kbnr/2p1p3/3p2pp/pP5P/3P1Pb1/4QN1R/PP3P2/RNB1KB2 b Qkq - 0 12",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-33",
+      "fen": "r1k2bnr/2p1pN2/2np2pp/pP5b/3P1P1P/7Q/PP1K1P2/RNB2B1R b - - 0 17",
+      "legalMoves": [
+        "c8b7",
+        "c8b8",
+        "e7e6",
+        "h5g4"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "c8b7",
+          "fen": "r4bnr/1kp1pN2/2np2pp/pP5b/3P1P1P/7Q/PP1K1P2/RNB2B1R w - - 1 18",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e7e6",
+          "fen": "r1k2bnr/2p2N2/2npp1pp/pP5b/3P1P1P/7Q/PP1K1P2/RNB2B1R w - - 0 18",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h5g4",
+          "fen": "r1k2bnr/2p1pN2/2np2pp/pP6/3P1PbP/7Q/PP1K1P2/RNB2B1R w - - 1 18",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-44",
+      "fen": "rk3bn1/2p1p3/2P3pr/p2p1Q2/3P1P1P/N7/PP1K4/R1Bb1B1R w - - 0 23",
+      "legalMoves": [
+        "a1b1",
+        "a3b1",
+        "a3b5",
+        "a3c2",
+        "a3c4",
+        "b2b3",
+        "b2b4",
+        "d2c3",
+        "d2d1",
+        "d2d3",
+        "d2e1",
+        "d2e3",
+        "f1a6",
+        "f1b5",
+        "f1c4",
+        "f1d3",
+        "f1e2",
+        "f1g2",
+        "f1h3",
+        "f5b1",
+        "f5c2",
+        "f5c8",
+        "f5d3",
+        "f5d5",
+        "f5d7",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f6",
+        "f5f7",
+        "f5f8",
+        "f5g4",
+        "f5g5",
+        "f5g6",
+        "f5h3",
+        "f5h5",
+        "h1g1",
+        "h1h2",
+        "h1h3",
+        "h4h5"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a1b1",
+          "fen": "rk3bn1/2p1p3/2P3pr/p2p1Q2/3P1P1P/N7/PP1K4/1RBb1B1R b - - 1 23",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f5c2",
+          "fen": "rk3bn1/2p1p3/2P3pr/p2p4/3P1P1P/N7/PPQK4/R1Bb1B1R b - - 1 23",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h4h5",
+          "fen": "rk3bn1/2p1p3/2P3pr/p2p1Q1P/3P1P2/N7/PP1K4/R1Bb1B1R b - - 0 23",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-55",
+      "fen": "r1k5/2p5/2P2npr/pN1pp3/1b1P1P1P/8/PPb3B1/R1B2KR1 b - - 5 28",
+      "legalMoves": [
+        "a5a4",
+        "a8a6",
+        "a8a7",
+        "a8b8",
+        "b4a3",
+        "b4c3",
+        "b4c5",
+        "b4d2",
+        "b4d6",
+        "b4e1",
+        "b4e7",
+        "b4f8",
+        "c2a4",
+        "c2b1",
+        "c2b3",
+        "c2d1",
+        "c2d3",
+        "c2e4",
+        "c2f5",
+        "c8b8",
+        "c8d8",
+        "e5d4",
+        "e5e4",
+        "e5f4",
+        "f6d7",
+        "f6e4",
+        "f6e8",
+        "f6g4",
+        "f6g8",
+        "f6h5",
+        "f6h7",
+        "g6g5",
+        "h6h4",
+        "h6h5",
+        "h6h7",
+        "h6h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a5a4",
+          "fen": "r1k5/2p5/2P2npr/1N1pp3/pb1P1P1P/8/PPb3B1/R1B2KR1 w - - 0 29",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c2f5",
+          "fen": "r1k5/2p5/2P2npr/pN1ppb2/1b1P1P1P/8/PP4B1/R1B2KR1 w - - 6 29",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h6h8",
+          "fen": "r1k4r/2p5/2P2np1/pN1pp3/1b1P1P1P/8/PPb3B1/R1B2KR1 w - - 6 29",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-66",
+      "fen": "r1kb2n1/2p1R3/2P3pB/pN1p4/3P3P/8/1Pb3B1/5KR1 w - - 3 34",
+      "legalMoves": [
+        "b2b3",
+        "b2b4",
+        "b5a3",
+        "b5a7",
+        "b5c3",
+        "b5c7",
+        "b5d6",
+        "e7c7",
+        "e7d7",
+        "e7e1",
+        "e7e2",
+        "e7e3",
+        "e7e4",
+        "e7e5",
+        "e7e6",
+        "e7e8",
+        "e7f7",
+        "e7g7",
+        "e7h7",
+        "f1e1",
+        "f1e2",
+        "f1f2",
+        "g1h1",
+        "g2d5",
+        "g2e4",
+        "g2f3",
+        "g2h1",
+        "g2h3",
+        "h4h5",
+        "h6c1",
+        "h6d2",
+        "h6e3",
+        "h6f4",
+        "h6f8",
+        "h6g5",
+        "h6g7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "b2b3",
+          "fen": "r1kb2n1/2p1R3/2P3pB/pN1p4/3P3P/1P6/2b3B1/5KR1 b - - 0 34",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e7h7",
+          "fen": "r1kb2n1/2p4R/2P3pB/pN1p4/3P3P/8/1Pb3B1/5KR1 b - - 4 34",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h6g7",
+          "fen": "r1kb2n1/2p1R1B1/2P3p1/pN1p4/3P3P/8/1Pb3B1/5KR1 b - - 4 34",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-77",
+      "fen": "2kb2n1/2p4R/2P3p1/pr1p4/3P3P/1P2B2b/5K2/1R6 b - - 0 39",
+      "legalMoves": [
+        "a5a4",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c5",
+        "c8b8",
+        "d8e7",
+        "d8f6",
+        "d8g5",
+        "d8h4",
+        "g6g5",
+        "g8e7",
+        "g8f6",
+        "g8h6",
+        "h3d7",
+        "h3e6",
+        "h3f1",
+        "h3f5",
+        "h3g2",
+        "h3g4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a5a4",
+          "fen": "2kb2n1/2p4R/2P3p1/1r1p4/p2P3P/1P2B2b/5K2/1R6 w - - 0 40",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d8h4",
+          "fen": "2k3n1/2p4R/2P3p1/pr1p4/3P3b/1P2B2b/5K2/1R6 w - - 0 40",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h3g4",
+          "fen": "2kb2n1/2p4R/2P3p1/pr1p4/3P2bP/1P2B3/5K2/1R6 w - - 1 40",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-88",
+      "fen": "1k1b4/2p5/2P5/pr1n3p/3P4/1P2B3/1R4K1/3b4 w - - 2 45",
+      "legalMoves": [
+        "b2a2",
+        "b2b1",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b3b4",
+        "e3c1",
+        "e3d2",
+        "e3f2",
+        "e3f4",
+        "e3g1",
+        "e3g5",
+        "e3h6",
+        "g2f1",
+        "g2f2",
+        "g2g1",
+        "g2g3",
+        "g2h1",
+        "g2h2",
+        "g2h3"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "b2a2",
+          "fen": "1k1b4/2p5/2P5/pr1n3p/3P4/1P2B3/R5K1/3b4 b - - 3 45",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e3f4",
+          "fen": "1k1b4/2p5/2P5/pr1n3p/3P1B2/1P6/1R4K1/3b4 b - - 3 45",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g2h3",
+          "fen": "1k1b4/2p5/2P5/pr1n3p/3P4/1P2B2K/1R6/3b4 b - - 3 45",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-99",
+      "fen": "1k6/2p5/2n2b2/p6p/1r1P4/5R2/3B2K1/3b4 b - - 3 50",
+      "legalMoves": [
+        "a5a4",
+        "b4a4",
+        "b4b1",
+        "b4b2",
+        "b4b3",
+        "b4b5",
+        "b4b6",
+        "b4b7",
+        "b4c4",
+        "b4d4",
+        "b8a7",
+        "b8a8",
+        "b8b7",
+        "b8c8",
+        "c6a7",
+        "c6d4",
+        "c6d8",
+        "c6e5",
+        "c6e7",
+        "d1a4",
+        "d1b3",
+        "d1c2",
+        "d1e2",
+        "d1f3",
+        "f6d4",
+        "f6d8",
+        "f6e5",
+        "f6e7",
+        "f6g5",
+        "f6g7",
+        "f6h4",
+        "f6h8",
+        "h5h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a5a4",
+          "fen": "1k6/2p5/2n2b2/7p/pr1P4/5R2/3B2K1/3b4 w - - 0 51",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c6d8",
+          "fen": "1k1n4/2p5/5b2/p6p/1r1P4/5R2/3B2K1/3b4 w - - 4 51",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h5h4",
+          "fen": "1k6/2p5/2n2b2/p7/1r1P3p/5R2/3B2K1/3b4 w - - 0 51",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-110",
+      "fen": "1k6/2p5/5b2/4P3/p6p/8/1r3K2/3bB3 w - - 2 56",
+      "legalMoves": [
+        "e1d2",
+        "f2e3",
+        "f2f1",
+        "f2g1"
+      ],
+      "isCheck": true,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1d2",
+          "fen": "1k6/2p5/5b2/4P3/p6p/8/1r1B1K2/3b4 b - - 3 56",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f2f1",
+          "fen": "1k6/2p5/5b2/4P3/p6p/8/1r6/3bBK2 b - - 3 56",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "f2g1",
+          "fen": "1k6/2p5/5b2/4P3/p6p/8/1r6/3bB1K1 b - - 3 56",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-121",
+      "fen": "1k4b1/8/2p5/4b3/p6B/8/1r6/6K1 b - - 1 61",
+      "legalMoves": [
+        "a4a3",
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "b8a7",
+        "b8a8",
+        "b8b7",
+        "b8c7",
+        "b8c8",
+        "c6c5",
+        "e5c3",
+        "e5c7",
+        "e5d4",
+        "e5d6",
+        "e5f4",
+        "e5f6",
+        "e5g3",
+        "e5g7",
+        "e5h2",
+        "e5h8",
+        "g8a2",
+        "g8b3",
+        "g8c4",
+        "g8d5",
+        "g8e6",
+        "g8f7",
+        "g8h7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a4a3",
+          "fen": "1k4b1/8/2p5/4b3/7B/p7/1r6/6K1 w - - 0 62",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "b8c8",
+          "fen": "2k3b1/8/2p5/4b3/p6B/8/1r6/6K1 w - - 2 62",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g8h7",
+          "fen": "1k6/7b/2p5/4b3/p6B/8/1r6/6K1 w - - 2 62",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-132",
+      "fen": "6b1/3k4/2p5/2B5/1r6/p7/3K4/b7 w - - 4 67",
+      "legalMoves": [
+        "c5a7",
+        "c5b4",
+        "c5b6",
+        "c5d4",
+        "c5d6",
+        "c5e3",
+        "c5e7",
+        "c5f2",
+        "c5f8",
+        "c5g1",
+        "d2c1",
+        "d2c2",
+        "d2d1",
+        "d2d3",
+        "d2e1",
+        "d2e2",
+        "d2e3"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "c5a7",
+          "fen": "6b1/B2k4/2p5/8/1r6/p7/3K4/b7 b - - 5 67",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c5f8",
+          "fen": "5Bb1/3k4/2p5/8/1r6/p7/3K4/b7 b - - 5 67",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d2e3",
+          "fen": "6b1/3k4/2p5/2B5/1r6/p3K3/8/b7 b - - 5 67",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-143",
+      "fen": "6b1/3k4/2p2b2/8/1r6/p7/3K4/6B1 b - - 15 72",
+      "legalMoves": [
+        "a3a2",
+        "b4a4",
+        "b4b1",
+        "b4b2",
+        "b4b3",
+        "b4b5",
+        "b4b6",
+        "b4b7",
+        "b4b8",
+        "b4c4",
+        "b4d4",
+        "b4e4",
+        "b4f4",
+        "b4g4",
+        "b4h4",
+        "c6c5",
+        "d7c7",
+        "d7c8",
+        "d7d6",
+        "d7d8",
+        "d7e6",
+        "d7e7",
+        "d7e8",
+        "f6a1",
+        "f6b2",
+        "f6c3",
+        "f6d4",
+        "f6d8",
+        "f6e5",
+        "f6e7",
+        "f6g5",
+        "f6g7",
+        "f6h4",
+        "f6h8",
+        "g8a2",
+        "g8b3",
+        "g8c4",
+        "g8d5",
+        "g8e6",
+        "g8f7",
+        "g8h7"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a3a2",
+          "fen": "6b1/3k4/2p2b2/8/1r6/8/p2K4/6B1 w - - 0 73",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d7e6",
+          "fen": "6b1/8/2p1kb2/8/1r6/p7/3K4/6B1 w - - 16 73",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "g8h7",
+          "fen": "8/3k3b/2p2b2/8/1r6/p7/3K4/6B1 w - - 16 73",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-154",
+      "fen": "8/3k4/4b3/8/2pB4/p7/8/2K5 w - - 2 78",
+      "legalMoves": [
+        "c1b1",
+        "c1c2",
+        "c1d1",
+        "c1d2",
+        "d4a1",
+        "d4a7",
+        "d4b2",
+        "d4b6",
+        "d4c3",
+        "d4c5",
+        "d4e3",
+        "d4e5",
+        "d4f2",
+        "d4f6",
+        "d4g1",
+        "d4g7",
+        "d4h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "c1b1",
+          "fen": "8/3k4/4b3/8/2pB4/p7/8/1K6 b - - 3 78",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d4c3",
+          "fen": "8/3k4/4b3/8/2p5/p1B5/8/2K5 b - - 3 78",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d4h8",
+          "fen": "7B/3k4/4b3/8/2p5/p7/8/2K5 b - - 3 78",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-165",
+      "fen": "2b5/8/1k6/8/2p5/p7/3K3B/8 b - - 13 83",
+      "legalMoves": [
+        "a3a2",
+        "b6a5",
+        "b6a6",
+        "b6a7",
+        "b6b5",
+        "b6b7",
+        "b6c5",
+        "b6c6",
+        "c4c3",
+        "c8a6",
+        "c8b7",
+        "c8d7",
+        "c8e6",
+        "c8f5",
+        "c8g4",
+        "c8h3"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a3a2",
+          "fen": "2b5/8/1k6/8/2p5/8/p2K3B/8 w - - 0 84",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c4c3",
+          "fen": "2b5/8/1k6/8/8/p1p5/3K3B/8 w - - 0 84",
+          "isCheck": true,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "c8h3",
+          "fen": "8/8/1k6/8/2p5/p6b/3K3B/8 w - - 14 84",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-2-ply-176",
+      "fen": "8/8/k7/4B3/2p1b3/8/8/b3K3 w - - 8 89",
+      "legalMoves": [
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e1f1",
+        "e1f2",
+        "e5a1",
+        "e5b2",
+        "e5b8",
+        "e5c3",
+        "e5c7",
+        "e5d4",
+        "e5d6",
+        "e5f4",
+        "e5f6",
+        "e5g3",
+        "e5g7",
+        "e5h2",
+        "e5h8"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "e1d1",
+          "fen": "8/8/k7/4B3/2p1b3/8/8/b2K4 b - - 9 89",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e5c7",
+          "fen": "8/2B5/k7/8/2p1b3/8/8/b3K3 b - - 9 89",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "e5h8",
+          "fen": "7B/8/k7/8/2p1b3/8/8/b3K3 b - - 9 89",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    },
+    {
+      "id": "seeded-game-3-ply-4",
+      "fen": "rnbqkbnr/1p1ppppp/2p5/p7/8/1P5P/P1PPPPP1/RNBQKBNR w KQkq - 0 3",
+      "legalMoves": [
+        "a2a3",
+        "a2a4",
+        "b1a3",
+        "b1c3",
+        "b3b4",
+        "c1a3",
+        "c1b2",
+        "c2c3",
+        "c2c4",
+        "d2d3",
+        "d2d4",
+        "e2e3",
+        "e2e4",
+        "f2f3",
+        "f2f4",
+        "g1f3",
+        "g2g3",
+        "g2g4",
+        "h1h2",
+        "h3h4"
+      ],
+      "isCheck": false,
+      "isCheckmate": false,
+      "isStalemate": false,
+      "transitions": [
+        {
+          "uci": "a2a3",
+          "fen": "rnbqkbnr/1p1ppppp/2p5/p7/8/PP5P/2PPPPP1/RNBQKBNR b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "d2d4",
+          "fen": "rnbqkbnr/1p1ppppp/2p5/p7/3P4/1P5P/P1P1PPP1/RNBQKBNR b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        },
+        {
+          "uci": "h3h4",
+          "fen": "rnbqkbnr/1p1ppppp/2p5/p7/7P/1P6/P1PPPPP1/RNBQKBNR b KQkq - 0 3",
+          "isCheck": false,
+          "isCheckmate": false,
+          "isStalemate": false
+        }
+      ]
+    }
+  ]
+}

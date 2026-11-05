@@ -1,0 +1,162 @@
+name: Upload signed build to TestFlight
+
+on:
+  workflow_dispatch:
+    inputs:
+      bundle_id:
+        description: Your registered explicit App ID (replace the project placeholder)
+        type: string
+        required: true
+      enable_accounts:
+        description: Enable Apple sign-in and iCloud key-value sync (profile must include both)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firstmove-testflight
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: macos-26
+    timeout-minutes: 35
+    env:
+      APP_BUNDLE_ID: ${{ inputs.bundle_id }}
+      ENABLE_ACCOUNTS: ${{ inputs.enable_accounts }}
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+      IOS_DISTRIBUTION_P12_BASE64: ${{ secrets.IOS_DISTRIBUTION_P12_BASE64 }}
+      IOS_DISTRIBUTION_P12_PASSWORD: ${{ secrets.IOS_DISTRIBUTION_P12_PASSWORD }}
+      IOS_APP_STORE_PROFILE_BASE64: ${{ secrets.IOS_APP_STORE_PROFILE_BASE64 }}
+      APP_STORE_CONNECT_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Check configuration and prepare temporary signing files
+        run: |
+          python3 - <<'PY'
+          import base64, os, pathlib, re, secrets
+          required = ["APPLE_TEAM_ID", "IOS_DISTRIBUTION_P12_BASE64", "IOS_DISTRIBUTION_P12_PASSWORD", "IOS_APP_STORE_PROFILE_BASE64", "APP_STORE_CONNECT_KEY_ID", "APP_STORE_CONNECT_ISSUER_ID", "APP_STORE_CONNECT_PRIVATE_KEY"]
+          missing = [name for name in required if not os.environ.get(name)]
+          if missing:
+              raise SystemExit("Add these repository Actions secrets: " + ", ".join(missing))
+          bundle = os.environ["APP_BUNDLE_ID"]
+          if bundle == "org.firstmove.chess" or not re.fullmatch(r"[A-Za-z0-9]+(?:[A-Za-z0-9-]*\.[A-Za-z0-9-]+)+", bundle):
+              raise SystemExit("Use your own registered reverse-DNS bundle identifier, not org.firstmove.chess.")
+          if not re.fullmatch(r"[A-Z0-9]{10}", os.environ["APPLE_TEAM_ID"]):
+              raise SystemExit("APPLE_TEAM_ID must be your ten-character Apple developer Team ID.")
+          signing = pathlib.Path(os.environ["RUNNER_TEMP"]) / "firstmove-signing"
+          signing.mkdir(mode=0o700, exist_ok=True)
+          for source, filename in [("IOS_DISTRIBUTION_P12_BASE64", "distribution.p12"), ("IOS_APP_STORE_PROFILE_BASE64", "app.mobileprovision")]:
+              (signing / filename).write_bytes(base64.b64decode(os.environ[source], validate=False))
+              (signing / filename).chmod(0o600)
+          key_path = signing / "AuthKey.p8"
+          key_path.write_text(os.environ["APP_STORE_CONNECT_PRIVATE_KEY"])
+          key_path.chmod(0o600)
+          keychain_password = secrets.token_urlsafe(32)
+          print("::add-mask::" + keychain_password)
+          with open(os.environ["GITHUB_ENV"], "a") as output:
+              output.write(f"SIGNING_DIR={signing}\n")
+              output.write(f"KEYCHAIN_PATH={signing / 'build.keychain-db'}\n")
+              output.write(f"KEYCHAIN_PASSWORD={keychain_password}\n")
+          PY
+      - name: Install distribution certificate and provisioning profile
+        run: |
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security import "$SIGNING_DIR/distribution.p12" -P "$IOS_DISTRIBUTION_P12_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security list-keychains -d user -s "$KEYCHAIN_PATH"
+          security cms -D -i "$SIGNING_DIR/app.mobileprovision" > "$SIGNING_DIR/profile.plist"
+          python3 - <<'PY'
+          import datetime, os, pathlib, plistlib, shutil
+          signing = pathlib.Path(os.environ["SIGNING_DIR"])
+          with (signing / "profile.plist").open("rb") as source:
+              profile = plistlib.load(source)
+          entitlement = profile["Entitlements"]
+          expected = os.environ["APPLE_TEAM_ID"] + "." + os.environ["APP_BUNDLE_ID"]
+          if entitlement.get("application-identifier") != expected:
+              raise SystemExit("The provisioning profile does not match the chosen explicit bundle ID and Team ID.")
+          if profile.get("ExpirationDate", datetime.datetime.min) <= datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None):
+              raise SystemExit("The provisioning profile has expired.")
+          if profile.get("ProvisionedDevices") or profile.get("ProvisionsAllDevices") or entitlement.get("get-task-allow", False):
+              raise SystemExit("Use an App Store distribution profile, not Development, Ad Hoc, or Enterprise.")
+          accounts = os.environ["ENABLE_ACCOUNTS"].lower() == "true"
+          if accounts:
+              if "Default" not in entitlement.get("com.apple.developer.applesignin", []):
+                  raise SystemExit("Enable Sign in with Apple for this App ID and regenerate the distribution profile.")
+              if not entitlement.get("com.apple.developer.ubiquity-kvstore-identifier"):
+                  raise SystemExit("Enable iCloud key-value storage for this App ID and regenerate the profile.")
+          profile_dir = pathlib.Path.home() / "Library/MobileDevice/Provisioning Profiles"
+          profile_dir.mkdir(parents=True, exist_ok=True)
+          installed = profile_dir / (profile["UUID"] + ".mobileprovision")
+          shutil.copyfile(signing / "app.mobileprovision", installed)
+          with open(os.environ["GITHUB_ENV"], "a") as output:
+              output.write(f"PROFILE_NAME={profile['Name']}\n")
+              output.write(f"INSTALLED_PROFILE_PATH={installed}\n")
+              output.write("ACCOUNTS_SETTING=" + ("YES" if accounts else "NO") + "\n")
+              output.write("ENTITLEMENTS_PATH=" + ("Knightly/FirstMove.entitlements" if accounts else "") + "\n")
+          PY
+      - name: Generate Xcode project
+        run: |
+          if ! command -v xcodegen >/dev/null; then brew install xcodegen; fi
+          xcodegen generate
+          xcodebuild -version
+      - name: Archive signed Release app
+        run: |
+          xcodebuild archive \
+            -project FirstMove.xcodeproj \
+            -scheme FirstMove \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -archivePath "$RUNNER_TEMP/FirstMove.xcarchive" \
+            PRODUCT_BUNDLE_IDENTIFIER="$APP_BUNDLE_ID" \
+            CURRENT_PROJECT_VERSION="${GITHUB_RUN_NUMBER}.${GITHUB_RUN_ATTEMPT}" \
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY="Apple Distribution" \
+            PROVISIONING_PROFILE_SPECIFIER="$PROFILE_NAME" \
+            FIRSTMOVE_ACCOUNTS_ENABLED="$ACCOUNTS_SETTING" \
+            FIRSTMOVE_ENTITLEMENTS="$ENTITLEMENTS_PATH" \
+            OTHER_CODE_SIGN_FLAGS="--keychain $KEYCHAIN_PATH"
+      - name: Create export settings
+        run: |
+          python3 - <<'PY'
+          import os, pathlib, plistlib
+          options = {
+              "method": "app-store-connect",
+              "destination": "upload",
+              "teamID": os.environ["APPLE_TEAM_ID"],
+              "signingStyle": "manual",
+              "signingCertificate": "Apple Distribution",
+              "provisioningProfiles": {os.environ["APP_BUNDLE_ID"]: os.environ["PROFILE_NAME"]},
+              "manageAppVersionAndBuildNumber": False,
+              "uploadSymbols": True,
+              "stripSwiftSymbols": True,
+          }
+          with (pathlib.Path(os.environ["SIGNING_DIR"]) / "ExportOptions.plist").open("wb") as output:
+              plistlib.dump(options, output)
+          PY
+      - name: Upload to App Store Connect
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/FirstMove.xcarchive" \
+            -exportPath "$RUNNER_TEMP/FirstMove-export" \
+            -exportOptionsPlist "$SIGNING_DIR/ExportOptions.plist" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$SIGNING_DIR/AuthKey.p8" \
+            -authenticationKeyID "$APP_STORE_CONNECT_KEY_ID" \
+            -authenticationKeyIssuerID "$APP_STORE_CONNECT_ISSUER_ID"
+      - name: Remove temporary signing material
+        if: always()
+        run: |
+          if [ -n "${KEYCHAIN_PATH:-}" ]; then security delete-keychain "$KEYCHAIN_PATH" || true; fi
+          security list-keychains -d user -s "$HOME/Library/Keychains/login.keychain-db" || true
+          if [ -n "${INSTALLED_PROFILE_PATH:-}" ]; then rm -f "$INSTALLED_PROFILE_PATH"; fi
+          rm -rf "$RUNNER_TEMP/firstmove-signing"

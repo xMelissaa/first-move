@@ -1,0 +1,87 @@
+name: iPhone build and tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  simulator:
+    name: Build, test, and capture iPhone
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Generate Xcode project
+        run: |
+          if ! command -v xcodegen >/dev/null; then brew install xcodegen; fi
+          xcodegen generate
+          xcodebuild -version
+      - name: Select an available iPhone simulator
+        run: |
+          python3 - <<'PY'
+          import json, os, re, subprocess
+          inventory = json.loads(subprocess.check_output(["xcrun", "simctl", "list", "devices", "available", "--json"]))
+          candidates = []
+          for runtime, devices in inventory["devices"].items():
+              if ".iOS-" not in runtime:
+                  continue
+              version = tuple(int(x) for x in re.findall(r"\d+", runtime.rsplit("iOS-", 1)[-1]))
+              for device in devices:
+                  if device["name"].startswith("iPhone") and device.get("isAvailable", True):
+                      candidates.append((version, device["name"], device["udid"]))
+          if not candidates:
+              raise SystemExit("No available iPhone simulator was found on this runner.")
+          _, name, udid = sorted(candidates, reverse=True)[0]
+          with open(os.environ["GITHUB_ENV"], "a") as output:
+              output.write(f"SIMULATOR_ID={udid}\n")
+          print(f"Using {name}: {udid}")
+          PY
+          mkdir -p build/screenshots
+      - name: Boot simulator
+        run: |
+          xcrun simctl boot "$SIMULATOR_ID" 2>/dev/null || true
+          xcrun simctl bootstatus "$SIMULATOR_ID" -b
+      - name: Run unit and interface tests without signing
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project FirstMove.xcodeproj \
+            -scheme FirstMove \
+            -configuration Debug \
+            -destination "platform=iOS Simulator,id=$SIMULATOR_ID" \
+            -derivedDataPath build/DerivedData \
+            -resultBundlePath build/TestResults.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            FIRSTMOVE_ACCOUNTS_ENABLED=NO \
+            FIRSTMOVE_ENTITLEMENTS="" \
+            | tee build/xcodebuild.log
+      - name: Capture app on iPhone
+        run: |
+          xcrun simctl install "$SIMULATOR_ID" "build/DerivedData/Build/Products/Debug-iphonesimulator/First Move.app"
+          xcrun simctl ui "$SIMULATOR_ID" appearance light
+          xcrun simctl status_bar "$SIMULATOR_ID" override --time "9:41" --batteryState charged --batteryLevel 100
+          xcrun simctl launch --terminate-running-process "$SIMULATOR_ID" org.firstmove.chess
+          sleep 3
+          xcrun simctl io "$SIMULATOR_ID" screenshot build/screenshots/FirstMove-iPhone.png
+      - name: Save test report, screenshot, and simulator app
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: FirstMove-simulator-${{ github.run_number }}
+          retention-days: 14
+          path: |
+            build/TestResults.xcresult
+            build/screenshots
+            build/xcodebuild.log
+            build/DerivedData/Build/Products/Debug-iphonesimulator/First Move.app

@@ -1,0 +1,17 @@
+{
+  "name": "first-move-course-validation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node validate-course.mjs",
+    "check:swift": "node check-swift-syntax.mjs"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0"
+  },
+  "devDependencies": {
+    "web-tree-sitter": "0.22.6",
+    "tree-sitter-wasms": "0.1.13"
+  }
+}
