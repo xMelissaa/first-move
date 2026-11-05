@@ -31,7 +31,9 @@ struct ChessBoardView: View {
                             if highlights.contains(square) { Palette.lime.opacity(0.7) }
                             if selected == square { Palette.lime.opacity(0.85) }
                             if let piece = piece {
-                                Text(piece.symbol)
+                                // Keep chess symbols in the text font; the black pawn
+                                // otherwise defaults to Apple's colored emoji glyph.
+                                Text(piece.symbol + "\u{FE0E}")
                                     .font(.system(size: side * 0.77))
                                     .foregroundStyle(piece.color == .white ? Color.white : Palette.forest)
                                     .shadow(color: Palette.forest.opacity(piece.color == .white ? 0.65 : 0.15), radius: 0.8, y: 1)
