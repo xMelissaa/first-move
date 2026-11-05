@@ -19,9 +19,9 @@ No course promises mistake-free games. First Move builds a foundation and habits
 
 ## Current status
 
-The native app compiled successfully with Xcode 26.6 on a hosted Mac on November 5, 2026. All **35 unit tests and 2 UI tests passed**, with zero failures, on an iPhone Air simulator. The captured learning-path screenshot was visually inspected. [View the successful build](https://github.com/xMelissaa/first-move/actions/runs/42091840932).
+The native app compiled successfully with Xcode 26.6 on a hosted Mac on November 5, 2026. All **35 unit tests and 2 UI tests passed**, with zero failures, on an iPhone Air simulator. The captured learning-path screenshot was visually inspected. [View the successful build](https://github.com/xMelissaa/first-move/actions/runs/42095101106).
 
-The tested app source is commit `927d5130eaf081b739593843895d18c8109e0f6e`. This package is source, not a signed iPhone installer. Apple sign-in, iCloud round trips, TestFlight distribution, and physical-device checks remain for the signed release after Apple enrollment.
+The tested app source is commit `400b1bafaec3b6ce338cc4b1a04bd770a62d8859`. This package is source, not a signed iPhone installer. Apple sign-in, iCloud round trips, TestFlight distribution, and physical-device checks remain for the signed release after Apple enrollment.
 
 You do not need to own a Mac. Follow [CLOUD-BUILD.md](CLOUD-BUILD.md) to use GitHub's hosted Mac for an unsigned simulator build and tests. GitHub usage limits depend on your account. A simulator `.app` is not an iPhone installer.
 

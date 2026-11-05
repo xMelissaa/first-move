@@ -2,7 +2,7 @@
 
 This repository contains a native SwiftUI iPhone app, not a website. GitHub's hosted Mac can generate its Xcode project, compile it, run the chess tests and interface tests, and save a simulator screenshot. You can start that workflow from Windows or your iPhone. Apple Developer Program membership is not required for the unsigned simulator build. GitHub Actions usage limits and any charges depend on your GitHub plan.
 
-The simulator workflow has now run successfully in [xMelissaa/first-move](https://github.com/xMelissaa/first-move/actions/runs/42091840932): Xcode 26.6 compiled the app and all 35 unit tests plus 2 UI tests passed on November 5, 2026. A simulator build cannot be installed on your iPhone; the later signed TestFlight route requires Apple developer membership and account setup. The signed workflow has not been run.
+The simulator workflow has now run successfully in [xMelissaa/first-move](https://github.com/xMelissaa/first-move/actions/runs/42095101106): Xcode 26.6 compiled the app and all 35 unit tests plus 2 UI tests passed on November 5, 2026. A simulator build cannot be installed on your iPhone; the later signed TestFlight route requires Apple developer membership and account setup. The signed workflow has not been run.
 
 ## 1. Run the free simulator build
 

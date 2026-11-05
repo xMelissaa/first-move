@@ -18,12 +18,12 @@
 
 All 35 native unit tests and 2 UI tests passed with zero failures. The run used Xcode 26.6 and an iPhone Air simulator on a GitHub-hosted Mac. Its test step ended with `TEST SUCCEEDED`; screenshot capture and artifact upload also succeeded.
 
-- Tested app source: `927d5130eaf081b739593843895d18c8109e0f6e`.
-- [Successful run](https://github.com/xMelissaa/first-move/actions/runs/42091840932), completed November 5, 2026.
+- Tested app source: `400b1bafaec3b6ce338cc4b1a04bd770a62d8859`.
+- [Successful run](https://github.com/xMelissaa/first-move/actions/runs/42095101106), completed November 5, 2026.
 - Unit suites: ChessParityTests (3), ChessPositionTests (20), PositionHistoryTests (2), ProgressTests (8), TrainingBotTests (2).
 - UI suite: FirstMoveUITests (2), covering real launch/interaction/persistence.
 - The captured learning-path screen was visually inspected after the run.
-- All 39 uploaded source files matched their local Git blob hashes before this documentation update.
+- All 40 uploaded source files matched their local Git blob hashes before this documentation update.
 
 ## Remaining signed-release checks
 
